@@ -163,10 +163,10 @@ name指令用于命名
 分区
 
 ```
-	mklabel gtp
-	mkpart primary 0% XXX
-	mkpart primary XXX xxxxx
-	……
+mklabel gtp
+mkpart primary 0% XXX
+mkpart primary XXX xxxxx
+……
 ```
 
 > 注意命令第一个分区起始位置使用的是0% 
@@ -176,5 +176,5 @@ name指令用于命名
 验证分区是否4K对齐
 
 ```
-	align-check optimal X
+align-check optimal X
 ```
