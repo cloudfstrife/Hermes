@@ -13,7 +13,7 @@ keywords:
 - tech
 ---
 
-##什么是GPG
+## 什么是GPG
 
 GnuPG（GNU Privacy Guard，GPG）是一种加密软件，它是PGP加密软件的开源替代物。GnuPG依照由IETF制定的OpenPGP技术标准设计。**GnuPG是用于加密、数字签章及产生非对称匙对的软件。**GPG 兼容 PGP（Pretty Good Privacy）的功能。
 
