@@ -3,7 +3,6 @@ title: "GPG使用教程"
 date: 2019-01-09T19:59:15+08:00
 categories:
 - Linux
-- subcategory
 tags:
 - Linux
 - GPG
