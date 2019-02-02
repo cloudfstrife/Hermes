@@ -333,4 +333,4 @@ apple : USD 100.00 / kg
 
 ## 参考链接
 
-[A Step-by-Step Guide to Go Internationalization (i18n) & Localization (l10n)]https://phraseapp.com/blog/posts/internationalization-i18n-go/
+[A Step-by-Step Guide to Go Internationalization (i18n) & Localization (l10n)](https://phraseapp.com/blog/posts/internationalization-i18n-go/)
