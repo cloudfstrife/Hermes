@@ -1,9 +1,9 @@
 baseURL = "http://www.bitlogs.tech/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "你算哪块小饼干"
+title = "| Cloud.F.Strife | Make The World A Better Place |"
 theme = "hugo-tranquilpeak-theme"
-# disqusShortname = "你算哪块小饼干"
+# disqusShortname = ""
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
@@ -104,8 +104,6 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "你算哪块小饼干"
-
   # Customization
   # Define the behavior of the sidebar
   # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
@@ -197,8 +195,8 @@ canonifyurls = true
   #   url = "/#about"
 
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
-  # [params.footer]
-  #   copyright = "<a href=\"https://github.com/cloudfstrife\">Cloud Strife</a>"
+  [params.footer]
+	copyright = "<a href=\"https://github.com/cloudfstrife\">Cloud Strife</a>"
 
   [params.gitalk]
     gitalk = true
