@@ -2,7 +2,7 @@
 title: "使用Docker构建gitlab仓库"
 date: 2019-01-14T20:00:26+08:00
 categories:
-- Docker
+- gitlab
 tags:
 - Docker
 - gitlab
