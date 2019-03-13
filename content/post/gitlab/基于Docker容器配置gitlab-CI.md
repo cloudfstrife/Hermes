@@ -39,7 +39,7 @@ gitlab/gitlab-runner
 docker exec -it gitlab-runner gitlab-ci-multi-runner register
 ```
 
-> 此命令会要求输入地址
+> 此命令会要求输入一些必要信息
 > 
 ```
 docker exec -it gitlab-runner gitlab-ci-multi-runner register
@@ -82,7 +82,7 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 
 **.gitlab-ci.yml**
 
-```
+```yaml
 stages:
   - deploy
 deploy:
@@ -106,7 +106,7 @@ go 1.12
 
 **main.go**
 
-```
+```go
 package main
 
 import "fmt"
@@ -117,3 +117,12 @@ func main() {
 ```
 
 提交项目提交到Master分支，就可以在项目的CI页面看以相关的作业。
+
+
+
+## 定期清理构建容器
+
+```shell
+docker rm -v `docker ps -a | grep Exited | grep "runner.*cache.*" | awk '{print $1}'`
+```
+
