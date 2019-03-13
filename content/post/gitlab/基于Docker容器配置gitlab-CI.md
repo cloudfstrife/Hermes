@@ -26,7 +26,7 @@ keywords:
 ## 创建gitlab-runner
 
 ```
-docker run -d --name gitlab-runner --restart always \
+docker run -d --name gitlab-runner \
 -v /var/run/docker.sock:/var/run/docker.sock \
 gitlab/gitlab-runner
 ```
