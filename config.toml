@@ -20,7 +20,7 @@ canonifyurls = true
   name = "Cloud Strife"
   bio = "ヾ(≧∇≦*)ゝ ♬♫♬♪♫"
   job = "Develop"
-  location = "Taipei City"
+  location = "7th Heaven"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "cloudfstrife@sina.cn"
   # Your profile picture
