@@ -118,7 +118,8 @@ vim /etc/locale.gen
 > 去除`en_US.UTF-8 UTF-8`和`zh_CN.UTF-8 UTF-8`前的注释符(#)
 
 ```
-echo "LANG=zh_CN.UTF-8" > /etc/locale.conf  
+echo "LANG=zh_CN.UTF-8" > /etc/locale.conf
+locale-gen zh_CN.UTF-8
 ```
 
 ## 设置主机名
@@ -166,7 +167,7 @@ chmod 440 /etc/sudoers
 ```
 pacman -S grub-efi-x86_64 efibootmgr os-prober 
 
-grub-install --efi-directory=/boot/efi --bootloader-id=grub
+grub-install --efi-directory=/boot/efi --bootloader-id=grub --bootloader-id=grub --recheck
 
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
