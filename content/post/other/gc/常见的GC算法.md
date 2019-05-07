@@ -65,3 +65,7 @@ keywords:
 分代GC将内存空间按”代(Generation)”分为几个部分(通常是两代，即Young Generation和Old Generation)，并尽可能频繁地在年轻的一代执行GC，当年轻一代的内存空间不够时，将可达对象全部移到上一代，此时年轻代的内存空间为空闲空间，可用于分配新对象，这样更快并且通常也更有效率。当老一代GC不够用时，才执行全量GC。
 
 通常大部分语言的运行时都会混合多种GC算法，比如Erlang的GC( 参考：[深入了解Erlang 垃圾回收机制以及其重要性](https://segmentfault.com/a/1190000003758525) )就混合了分代GC和引用计数，在进程堆内使用分代GC，对全局数据使用引用计数(即时释放内存)。
+
+---
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
