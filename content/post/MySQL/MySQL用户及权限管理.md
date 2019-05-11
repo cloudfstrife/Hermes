@@ -8,7 +8,8 @@ tags:
 - Database
 - MySQL
 keywords:
-- tech
+- MySQL
+- 用户权限管理
 ---
 
 MySQL用户及权限管理

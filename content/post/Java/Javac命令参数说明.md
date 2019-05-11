@@ -7,8 +7,7 @@ tags:
 - Java
 - javac
 keywords:
-- tech
-#thumbnailImage: //example.com/image.jpg
+- Javac
 ---
 
 Javac命令参数说明

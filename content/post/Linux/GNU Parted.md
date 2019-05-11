@@ -7,7 +7,8 @@ tags:
 - Linux
 - GNU Parted
 keywords:
-- tech
+- Linux
+- GNU Parted
 ---
 
 

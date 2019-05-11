@@ -6,7 +6,7 @@ categories:
 tags:
 - Docker
 keywords:
-- tech
+- Docker
 ---
 
 Debian安装Docker CE

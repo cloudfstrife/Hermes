@@ -8,7 +8,9 @@ tags:
 - golang
 - rand
 keywords:
-- tech
+- go
+- golang
+- rand
 ---
 
 golang 内置能实现伪随机(math/rand)和真随机(crypto/rand)的库。

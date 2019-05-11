@@ -7,7 +7,8 @@ tags:
 - Linux
 - fstab
 keywords:
-- tech
+- Linux
+- fstab
 ---
 
 `/etc/fstab`记录Linux操作系统的静态文件系统配置信息。当Linux系统启动的时候，系统会自动读取文件信息，将此文件中指定的文件系统挂载到指定的目录。

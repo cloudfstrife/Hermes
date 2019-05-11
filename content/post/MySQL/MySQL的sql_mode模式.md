@@ -7,8 +7,10 @@ categories:
 tags:
 - Database
 - MySQL
+- sql_mode
 keywords:
-- tech
+- MySQL
+- sql_mode
 ---
 
 sql_mode是mysql的一个环境变量,定义了mysql应该支持的sql语法，数据校验等。

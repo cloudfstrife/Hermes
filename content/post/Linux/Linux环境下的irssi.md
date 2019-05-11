@@ -7,7 +7,8 @@ tags:
 - Linux
 - irssi
 keywords:
-- tech
+- Linux
+- irssi
 ---
 
 Linux环境下的irssi

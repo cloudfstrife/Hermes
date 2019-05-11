@@ -8,7 +8,9 @@ tags:
 - Gitlab
 - CI
 keywords:
-- tech
+- Docker
+- gitlab
+- CI
 ---
 
 基于Docker容器，部署gitlab的CI环境

@@ -9,7 +9,10 @@ tags:
 - goroutine
 - GMP Module
 keywords:
-- tech
+- golang
+- go
+- goroutine
+- GMP
 ---
 
 Go语言在语言层面实现并发。Go编写一个并发编程程序很简单，只需要在函数调用之前使用一个`go`关键字即可启动一个goroutine执行并发。

@@ -9,7 +9,10 @@ tags:
 - Crypto
 - Sign
 keywords:
-- tech
+- Linux
+- GPG
+- Crypto
+- Sign
 ---
 
 ## 什么是GPG

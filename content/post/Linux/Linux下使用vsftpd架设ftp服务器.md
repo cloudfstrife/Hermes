@@ -8,7 +8,9 @@ tags:
 - vsftpd
 - FTP
 keywords:
-- tech
+- Linux
+- vsftpd
+- ftp
 ---
 
 本文在CentOS release 6.3 (Final)环境下，使用vsftpd建立FTP服务器

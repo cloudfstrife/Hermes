@@ -9,7 +9,10 @@ tags:
 - log
 - logrus
 keywords:
-- tech
+- golang
+- go
+- log
+- logger
 ---
 
 logrus是go语言的结构化日志程序，完全兼容于标准库log的API。

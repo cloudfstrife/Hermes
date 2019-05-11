@@ -8,7 +8,9 @@ tags:
 - golang
 - testing
 keywords:
-- tech
+- go
+- golang 
+- testing
 ---
 
 本文以一个返回斐波纳切数的函数做为示例，列记录Go程序单元测试，性能测试的编写。
@@ -121,13 +123,13 @@ func ExampleFibonacci() {
 go语言的测试代码应该与被测试代码放在相同的包里，测试源代码文件以`_test.go`结尾。
 
 **单元测试**函数签名格式为`func TestXxx(*testing.T)`，函数名以`Test`开头，输入参数为`testing.T`类型的指针。
- 
+
 **基准测试**函数签名格式为`func BenchmarkXxx(*testing.B)`，函数以`Benchmark`开头，输入参数为`testing.B`类型的指针。
- 
+
 基准函数必须运行b.N次被测试代码。在执行基准测试期间，go test命令会先尝试把b.N设置为1，并执行测试函数，如果测试执行时间没有超过执行时间上限（默认1秒），则会改大b.N的值，并再次测试。直到这个时间大于等于上限为止。
 
 **注意** b.N是被测试函数执行的次数，不是Benchmark函数的执行次数。
- 
+
 **示例代码**函数签名格式为`func ExampleXxx()`，函数体结尾处可以包含以`// Output:`开头的输出验证信息。如果不包含此注释，运行测试时，此示例不会运行。
 
 在上面的代码中，使用了一些技巧。

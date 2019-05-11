@@ -7,7 +7,8 @@ tags:
 - Docker
 - gitlab
 keywords:
-- tech
+- Docker
+- Gitlab
 ---
 
 使用Docker构建gitlab仓库

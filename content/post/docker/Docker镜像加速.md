@@ -6,7 +6,8 @@ categories:
 tags:
 - Docker
 keywords:
-- tech
+- Docker
+- 镜像加速
 ---
 
 使用中国科技大学镜像

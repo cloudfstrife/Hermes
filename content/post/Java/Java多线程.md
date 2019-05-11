@@ -6,7 +6,8 @@ categories:
 tags:
 - Java
 keywords:
-- tech
+- Java
+- 多线程
 ---
 
 Java多线程

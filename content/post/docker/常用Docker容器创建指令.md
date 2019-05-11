@@ -6,7 +6,7 @@ categories:
 tags:
 - Docker
 keywords:
-- tech
+- Docker
 ---
 
 常用的Docker容器创建指令

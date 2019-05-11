@@ -9,8 +9,8 @@ tags:
 - "go"
 - "Visual Studio Code"
 keywords:
-- tech
-
+- go
+- vscode
 ---
 
 安装Visual Studio Code的Go语言插件所需要的扩展工具的shell

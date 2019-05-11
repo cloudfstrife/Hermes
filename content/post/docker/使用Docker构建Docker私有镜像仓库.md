@@ -7,7 +7,8 @@ tags:
 - Docker
 - registry
 keywords:
-- tech
+- Docker
+- registry
 ---
 
 使用Docker构建Docker私有镜像仓库

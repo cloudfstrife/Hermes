@@ -10,7 +10,9 @@ tags:
 - "i18n"
 - "l10n"
 keywords:
-- tech
+- golang
+- go
+- i18n
 ---
 
 Go语言中，大多数消息都是在`fmt`和`template`包中输出，所以，在处理国际化时，也从这两个方向出发。

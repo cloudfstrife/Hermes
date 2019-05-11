@@ -8,7 +8,9 @@ tags:
 - AP
 - 软路由
 keywords:
-- tech
+- Linux
+- AP
+- 软路由
 ---
 
 Linux环境使用无线网卡配置AP

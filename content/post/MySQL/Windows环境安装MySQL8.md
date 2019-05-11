@@ -6,7 +6,7 @@ categories:
 tags:
 - MySQL
 keywords:
-- tech
+- MySQL
 ---
 
 Windows环境安装 MySQL 8

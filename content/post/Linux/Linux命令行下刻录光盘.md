@@ -8,7 +8,9 @@ tags:
 - nrg2iso
 - growisofs
 keywords:
-- tech
+- Linux
+- nrg2iso
+- growisofs
 ---
 
 Linux命令行下刻录光盘

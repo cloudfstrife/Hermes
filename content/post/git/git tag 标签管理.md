@@ -6,7 +6,8 @@ categories:
 tags:
 - git
 keywords:
-- tech
+- git
+- tag
 ---
 
 跟大多数版本控制工具一样，git也有“标签”功能，一般用这个功能来标记发布节点,例如`v0.0.1`。

@@ -8,7 +8,8 @@ tags:
 - Linux
 - Arch
 keywords:
-- tech
+- Linux
+- Arch
 ---
 
 虚拟机安装 Arch Linux 的过程

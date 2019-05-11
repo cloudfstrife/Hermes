@@ -8,7 +8,8 @@ tags:
 - GC
 - 垃圾收回算法
 keywords:
-- tech
+- GC
+- 垃圾收回算法
 ---
 
 垃圾收集(Garbage Collection) 通常被称为"GC"，常见的 GC 算法有 : 引用计数法、标记清除法、三色标记法、分代收集法。

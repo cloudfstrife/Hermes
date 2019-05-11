@@ -6,7 +6,7 @@ categories:
 tags:
 - TOML
 keywords:
-- tech
+- TOML
 ---
 
 本文是对[https://github.com/toml-lang/toml](https://github.com/toml-lang/toml)的翻译，增加了一些个人理解，还有一些实验中遇到的问题处理。

@@ -7,7 +7,8 @@ tags:
 - Java
 - 泛型
 keywords:
-- tech
+- Java
+- 泛型
 ---
 
 JDK 5.0 中增加的泛型类型，是 Java 语言中类型安全的一次重要改进。泛型允许在定义类和接口的时候使用类型参数（type parameter）。声明的类型参数在使用时用具体的类型来替换。

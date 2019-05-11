@@ -7,7 +7,9 @@ tags:
 - HOWTO
 - Aaron Swartz
 keywords:
-- life
+- HOWTO
+- Aaron Swartz
+- 如何提高效率
 ---
 
 原文标题 : [HOWTO: Be more productive](http://www.aaronsw.com/weblog/productivity)

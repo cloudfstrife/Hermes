@@ -7,7 +7,7 @@ tags:
 - Sonar
 - SonarQube
 keywords:
-- tech
+- SonarQube
 ---
 
 ## Sonar简介
