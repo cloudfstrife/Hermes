@@ -40,8 +40,6 @@ touch fibonacci/fibonacci.go
 ```
 package fibonacci
 
-import "time"
-
 //Fibonacci 返回n以内的斐波那契数列元素
 func Fibonacci(n int64) []int64 {
         result := make([]int64, 0)
