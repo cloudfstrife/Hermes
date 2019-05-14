@@ -169,8 +169,7 @@ FAIL    app/testing/fibonacci   3.057s
 ## 基准测试
 
 ```
-cd fibonacci
-go test -v -bench . -run ^$
+go test -bench . -run ^$ ./fibonacci
 ```
 
 > * `-bench`指定执行哪些基准测试，`.`表示测试此包中下的所有基准测试，可以使用正则表达式来执行特定的测试
@@ -179,13 +178,13 @@ go test -v -bench . -run ^$
 > 
 > * windows 的cmd命令行下要实现以上效果，命令有点不一样
 > 
-> `go test -v -bench="." -run="^$"`
+> `go test -v -bench="." -run="^$" .\fibonacci` 
 > 
 
 输出
 
 ```
-$ go test -v -bench . -run ^$
+$ go test -bench . -run ^$ ./fibonacci
 goos: windows
 goarch: amd64
 pkg: app/testing/fibonacci

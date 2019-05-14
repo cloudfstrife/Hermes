@@ -263,14 +263,12 @@ func BenchmarkFibonacci(b *testing.B) {
 		}
 	})
 }
-
 ```
 
 运行效果
 
 ```
-$ cd fibonacci/
-$ go test -bench . -run ^$ -cpu 1,2,3,4,5,6,7,8
+$ go test -bench . -run ^$ -cpu 1,2,3,4,5,6,7,8  ./fibonacci
 goos: windows
 goarch: amd64
 pkg: app/testing/fibonacci
@@ -312,7 +310,7 @@ $ go tool cover -html fibonacci_cover.out
 
 ![覆盖率](/images/go/testing/cover.png)
 
-## 性能采样
+## 运行时数据采样
 
 在运行基准测试时，如果某部分代码运行效率较低，需要分析低效的原因。此时，可以在基准测试，对运行时的内存，CPU，阻塞，锁状态进行采样。
 
@@ -320,9 +318,7 @@ $ go tool cover -html fibonacci_cover.out
 
 ```
 $ mkdir profile
-$ cd fibonacci
-$ go test -bench . -run ^$ -blockprofile block.out -cpuprofile cpu.out -memprofile mem.out -mutexprofile mutex.out  -trace trace.out -outputdir ../profile
-$ cd ../
+$ go test -bench . -run ^$ -blockprofile block.out -cpuprofile cpu.out -memprofile mem.out -mutexprofile mutex.out  -trace trace.out -outputdir ../profile ./fibonacci
 $ ls profile/
 block.out  cover.out  cpu.out  mem.out  mutex.out  trace.out
 ```
@@ -334,7 +330,8 @@ block.out  cover.out  cpu.out  mem.out  mutex.out  trace.out
 * `-memprofile mem.out`    内存采样数据输出到mem.out
 * `-mutexprofile mutex.out`    加锁与释放锁的采样数据输出到mutex.out
 * `-trace trace.out`    执行追踪数据输出到trace.out
-* `-outputdir ../profile`    指定采样数据存在目录
+* `-outputdir ../profile`    指定采样数据存在目录，这个参数是相对于基准测试的包的目录来的，**不是指当前目录**。
+
 
 有了这些采样文件，就可以使用`go tool`来进行性能分析了，当然对哪些数据进行采样，应该跟据情况设置，并不需要对所有数据进行采样，毕竟采样也是有性能损耗的。
 
