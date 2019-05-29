@@ -67,7 +67,7 @@ WHILE POSITION_UNDER>0 DO
     SELECT SUBSTR(content,POSITION_UNDER+1,length(content)) into content;
     SELECT POSITION('_' in content) INTO POSITION_UNDER;
 END WHILE ; 
-SELECT concat(V,upper(SUBSTR(content,1,1)),SUBSTR(content,2,POSITION_UNDER-2)) into V;
+SELECT concat(V,upper(SUBSTR(content,1,1)),SUBSTR(content,2,length(content))) into V;
 RETURN V ;
 END
 $$
