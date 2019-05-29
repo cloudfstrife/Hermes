@@ -1,6 +1,6 @@
 ---
 title: "在测试中使用go-cmp"
-date: 2019-05-13T16:40:21+08:00
+date: 2019-05-13T19:40:21+08:00
 categories:
 - golang
 - testing
