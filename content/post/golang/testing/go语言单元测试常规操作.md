@@ -51,11 +51,11 @@ func Fibonacci(n int64) []int64 {
                 result = append(result, y)
         }
         for {
-                if y >= n {
-                        break
-                }
-                x, y = y, x+y
-                result = append(result, y)
+			x, y = y, x+y
+			if y >= n {
+				break
+			}
+			result = append(result, y)
         }
         return result
 }
