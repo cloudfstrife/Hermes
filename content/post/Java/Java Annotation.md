@@ -153,7 +153,3 @@ public @interface 注解名 {
 1. 成员参数，其修饰符只有public、默认(default)。
 1. 参数成员只能用八种基本类型和String、Enum、Class、annotation等数据类型及其数组形式。
 1. 当自定义annotation中只有一个参数时，最好将参数名定义为value，因为当参数名为value时，在使用注解的时候可以不指定参数名称而直接赋值即可。
-
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。

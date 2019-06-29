@@ -127,4 +127,3 @@ func main() {
 ```shell
 docker rm -v `docker ps -a | grep Exited | grep "runner.*cache.*" | awk '{print $1}'`
 ```
-

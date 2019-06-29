@@ -36,7 +36,3 @@ sha256sum xxxx.iso; dd if=/dev/dvd1 bs=2048 count=$(($(stat -c "%s" xxxx.iso) / 
 ```
 
 如果两个SHA256校验值相同代表记录OK。
-
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。

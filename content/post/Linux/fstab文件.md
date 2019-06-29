@@ -175,9 +175,3 @@ UUID=4209c845-f495-4c43-8a03-5363dd433153 none  swap              defaults      
 
 [https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
----
-
-
-本文部分内容引用自[fstab (简体中文)](https://wiki.archlinux.org/index.php/Fstab_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
-
-采用<a rel="license" href="https://www.gnu.org/licenses/fdl-1.3.en.html">GNU Free Documentation License</a>进行许可。

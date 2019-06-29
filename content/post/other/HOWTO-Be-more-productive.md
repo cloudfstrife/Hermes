@@ -169,7 +169,3 @@ keywords:
 如果你想了解更多关于动机的心理学知识，没有比 [ Alfie Kohn](http://www.alfiekohn.org/) 更好的了。他写了很多文章，还有一本书：[Punished by Rewards](http://www.alfiekohn.org/books/pbr.htm) ，我强烈推荐。
 
 我希望在未来的一篇文章中讨论退学，你真的应该走出去，拿起 [The Teenage Liberation Handbook](http://www.lowryhousepublishers.com/TeenageLiberationHandbook.htm)，如果你是一位计算机行业从业者，辞职的一种方式是向 [ Y Combinator](https://www.ycombinator.com/) 申请资金，与此同时，Mickey Z的书 [ The Murdering of My Years](http://www.softskull.com/detailedbook.php?isbn=1-887128-78-6) 以艺术家和社会活动人士的身份讨论如果做自己想做的事同时做到收支平衡的。
-
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。

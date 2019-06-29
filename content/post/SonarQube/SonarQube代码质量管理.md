@@ -138,7 +138,3 @@ sonar.sourceEncoding=UTF-8
 ### 执行分析
 
 打开命令行，进入项目目录，执行`sonar-scanner.bat`，执行结束，即可在SonarQube web管理界面看到项目的代码质量分析结束。
-
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
