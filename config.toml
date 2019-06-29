@@ -158,8 +158,8 @@ canonifyurls = true
 
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
-  # [[params.customCSS]]
-  #   href = "css/mystyle.css"
+  [[params.customCSS]]
+	href = "css/customization.css"
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
   # they have to be referred from static root. Example
@@ -185,10 +185,10 @@ canonifyurls = true
   #  icon = "fa-google-plus"
   #  url = "https://plus.google.com/share?url=%s"
 
-  [params.header.rightLink]
-	class = "open-algolia-search"
-	icon = "search"
-	url = "/#search"
+  #[params.header.rightLink]
+  #  class = "open-algolia-search"
+  #  icon = "search"
+  #  url = "/#search"
 
   # Customize link of author avatar in sidebar
   # [params.sidebar.profile]
