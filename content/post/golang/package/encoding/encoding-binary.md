@@ -1,15 +1,17 @@
 ---
-title: "Go Binary包"
+title: "Go encoding/binary"
 date: 2019-07-18T18:32:25+08:00
 categories:
 - golang
-- encoding
+- package
 tags:
 - golang
+- package
 - encoding
 - binary
 keywords:
 - golang
+- package
 - encoding
 - binary
 ---
