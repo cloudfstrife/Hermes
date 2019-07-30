@@ -1,14 +1,13 @@
 ---
-title: "压缩golang二进制文件体积"
+title: "压缩Go可执行程序文件体积"
 date: 2019-06-21T17:13:11+08:00
 categories:
-- golang
+- Go
 - command
 tags:
-- golang
+- Go
 keywords:
-- golang
-- go
+- Go
 ---
 
 `go`语言程序默认使用静态编译，生成的可执行程序不依赖任何动态链接库，可以任意部署到各种运行环境，不用担心依赖库的版本问题。

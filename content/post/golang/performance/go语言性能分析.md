@@ -2,13 +2,13 @@
 title: "Go语言性能分析"
 date: 2019-05-22T16:30:26+08:00
 categories:
-- golang
+- Go
 - Performance
 tags:
-- golang
+- Go
 - performance
 keywords:
-- golang
+- Go
 - Performance
 ---
 
@@ -24,7 +24,7 @@ go语言的提供了非常好用的性能采样与分析工具。
 
 ### CPU概要采样
 
-```
+```go
 pprof.StartCPUProfile(w Writer)
 defer pprof.StopCPUProfile()
 ```
@@ -32,7 +32,7 @@ defer pprof.StopCPUProfile()
 
 ### 堆内存概要采样
 
-```
+```go
 runtime.MemProfileRate = 8
 defer pprof.WriteHeapProfile(w Writer)
 ```
@@ -43,7 +43,7 @@ defer pprof.WriteHeapProfile(w Writer)
 
 ### 阻塞概要采样
 
-```
+```go
 runtime.SetBlockProfileRate(rate int)
 blockpprof := pprof.Lookup("block")
 blockpprof.WriteTo(w io.Writer, debug int)
@@ -61,7 +61,7 @@ blockpprof.WriteTo(w io.Writer, debug int)
 
 ### Mutex事件采样
 
-```
+```go
 runtime.SetMutexProfileFraction(rate int)
 mutexpprof := pprof.Lookup("mutex")
 mutexpprof.WriteTo(mutexProfile, 0)
@@ -69,7 +69,7 @@ mutexpprof.WriteTo(mutexProfile, 0)
 
 > `runtime.SetMutexProfileFraction(rate int)`这个函数的注释看的不是很明白，原文放在下面了。大致行为和`runtime.SetBlockProfileRate`差不多。
 
-```
+```go
 func SetMutexProfileFraction(rate int) int
     SetMutexProfileFraction controls the fraction of mutex contention events
     that are reported in the mutex profile. On average 1/rate events are
@@ -81,8 +81,7 @@ func SetMutexProfileFraction(rate int) int
 
 ### 其它采样
 
-
-```
+```go
 //goroutine
 goroutinepprof := pprof.Lookup("goroutine")
 goroutinepprof.WriteTo(goroutineProfile, 0)
@@ -105,7 +104,7 @@ trace.Stop()
 
 使用go原生的http服务时，`import`内置的监测包即可通过http服务查看采样数据。
 
-```
+```go
 import(
     _ "net/http/pprof"
 )
@@ -285,7 +284,7 @@ go 1.12
 
 ** fibonacci/fibonacci.go**
 
-```
+```go
 package fibonacci
 
 import (
@@ -322,7 +321,7 @@ func Fibonacci(n int64) []int64 {
 
 **main.go**
 
-```
+```go
 package main
 
 import (

@@ -2,14 +2,13 @@
 title: "Go语言生成随机数"
 date: 2019-05-05T12:44:00+08:00
 categories:
-- golang
+- Go
 - rand
 tags:
-- golang
+- Go
 - rand
 keywords:
-- go
-- golang
+- Go
 - rand
 ---
 
@@ -29,7 +28,7 @@ golang 内置能实现伪随机(math/rand)和真随机(crypto/rand)的库。
 
 ## golang的伪随机
 
-```
+```go
 package main
 
 import (
@@ -49,7 +48,7 @@ func main() {
 
 ## golang的真随机
 
-```
+```go
 package main
 
 import (

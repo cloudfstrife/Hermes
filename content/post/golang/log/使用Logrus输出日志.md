@@ -2,15 +2,14 @@
 title: "使用logrus输出日志"
 date: 2019-03-18T15:16:31+08:00
 categories:
-- golang
+- Go
 - log
 tags:
-- golang
+- Go
 - log
 - logrus
 keywords:
-- golang
-- go
+- Go
 - log
 - logger
 ---
@@ -140,7 +139,7 @@ log.WithFields(log.Fields{
 
 JSONFormat
 
-```
+```json
 {"event":"onchange","key":"001","level":"fatal","msg":"Failed to send event","time":"2019-03-18T17:09:46+08:00","topic":"logrus"}
 ```
 
@@ -163,7 +162,7 @@ requestLogger.Warn("something not great happened")
 
 如果希望日志记录附带调用方法字段，可以使用下面的方法来设置：
 
-```
+```go
 log.SetReportCaller(true)
 ```
 
@@ -377,7 +376,7 @@ func TestSomething(t*testing.T){
 
 logrus可以定义一个或者多个函数，当记录fatal级别的日志被记录时调用这些函数处理Fatal。注册的函数将在`os.Exit(1)`之前被调用。这种行为有利于优雅退出程序。但是这个机制不能像panic那样使用defer和recover来恢复。
 
-```
+```go
 handler := func() {
   // gracefully shutdown something...
 }

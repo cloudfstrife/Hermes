@@ -2,16 +2,14 @@
 title: "Go语言的国际化(i18n)与本地化(l10n)"
 date: 2019-01-31T09:21:07+08:00
 categories:
-- "golang"
-- "i18n"
+- Go
+- i18n
 tags:
-- "golang"
-- "go"
-- "i18n"
-- "l10n"
+- Go
+- i18n
+- l10n
 keywords:
-- golang
-- go
+- Go
 - i18n
 ---
 
@@ -25,8 +23,7 @@ Go语言中，大多数消息都是在`fmt`和`template`包中输出，所以，
 
 消息是要传递给用户的某种形式的内容。每个消息都有一个key,可以有多种语言形式。`message`子包提供了`NewPrinter`函数，此函数返回一个`Printfer`实例，Printer实现了`fmt`风格的API方法。
 
-
-```
+```go
 package main
 
 import (
@@ -79,7 +76,7 @@ language.Parse("en-UK")
 
 * 组合方式
 
-```
+```go
 ja, _ := language.ParseBase("ja")
 jp, _ := language.ParseRegion("JP")
 jpLngTag, _ := language.Compose(ja, jp)
@@ -90,7 +87,7 @@ fmt.Println(jpLngTag)
 
 为了输出不同语言的消息，需要事先将消息的翻译内容放到`Catalog`中。`message.SetString`和`Printer.Printf`函数输入的`key`是严格判等，如果printf时无法匹配到，将默认使用`key`的内容做为`fmt`方法的参数。
 
-```
+```go
 package main
 
 import (
@@ -130,7 +127,7 @@ happy new Year
 
 有时程序需要跟据事物的数量进行一些格式化，`golang.org/x/text/feature/plural`导出了一个`SelectF`函数，用于多语言中处理复数。
 
-```
+```go
 package main
 
 import (
@@ -181,7 +178,7 @@ func main() {
 
 在处理文本过程中，可以指定占位符变量的方式来处理某些特定的语言特征情况。
 
-```
+```go
 package main
 
 import (
@@ -235,7 +232,7 @@ func main() {
 
 `golang.org/x/text/currency`包提供了处理货币格式化规则的方法。
 
-```
+```go
 package main
 
 import (

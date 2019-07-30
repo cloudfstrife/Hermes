@@ -2,15 +2,14 @@
 title: "在测试中使用go-cmp"
 date: 2019-05-13T19:40:21+08:00
 categories:
-- golang
+- Go
 - testing
 tags:
-- golang
+- Go
 - testing
 - go-cmp
 keywords:
-- go
-- golang 
+- Go 
 - testing
 - go-cmp
 ---
@@ -43,7 +42,7 @@ Equal函数用于比较两个值是否相等。其会经过以下规则：
 
 #### 存在未导出字段
 
-```
+```go
 package fibonacci
 
 import (
@@ -114,7 +113,7 @@ FAIL    app/testing/fibonacci   0.063s
 
 #### 指定比较未导出字段
 
-```
+```go
 package fibonacci
 
 import (
@@ -163,8 +162,7 @@ FAIL    app/testing/fibonacci   0.057s
 
 #### 忽略未导出字段 
 
-
-```
+```go
 package fibonacci
 
 import (
@@ -213,7 +211,7 @@ ok      app/testing/fibonacci   0.068s
 
 #### 自定义比较器
 
-```
+```go
 package fibonacci
 
 import (
@@ -265,7 +263,7 @@ ok      app/testing/fibonacci   (cached)
 #### 自定义转换器
 
 
-```
+```go
 package fibonacci
 
 import (
@@ -316,7 +314,7 @@ FAIL    app/testing/fibonacci   0.062s
 
 #### struct的Equal函数 
 
-```
+```go
 package fibonacci
 
 import (
@@ -365,7 +363,7 @@ ok      app/testing/fibonacci   (cached)
 
 #### option与Equal方法同时存在的情况
 
-```
+```go
 package fibonacci
 
 import (
@@ -436,7 +434,7 @@ Diff 函数返回人类可读的两个值的比较结果。当且仅当输入的
 
 **示例**
 
-```
+```go
 package fibonacci
 
 import (

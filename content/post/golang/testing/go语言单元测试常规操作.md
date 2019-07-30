@@ -2,14 +2,13 @@
 title: "Go语言单元测试常规操作"
 date: 2019-05-10T16:57:56+08:00
 categories:
-- golang
+- Go
 - testing
 tags:
-- golang
+- Go
 - testing
 keywords:
-- go
-- golang 
+- Go
 - testing
 ---
 
@@ -37,7 +36,7 @@ touch fibonacci/fibonacci.go
 
 **fibonacci/fibonacci.go**
 
-```
+```go
 package fibonacci
 
 //Fibonacci 返回n以内的斐波那契数列元素
@@ -69,7 +68,7 @@ touch fibonacci/fibonacci_test.go
 
 **fibonacci/fibonacci_test.go**
 
-```
+```go
 package fibonacci
 
 import (

@@ -2,15 +2,15 @@
 title: "Go encoding/binary"
 date: 2019-07-18T18:32:25+08:00
 categories:
-- golang
+- Go
 - package
 tags:
-- golang
+- Go
 - package
 - encoding
 - binary
 keywords:
-- golang
+- Go
 - package
 - encoding
 - binary
@@ -59,7 +59,7 @@ Go语言中的`binary.BigEndian`和`binary.LittleEndian`定义了编解码时使
 
 **示例**
 
-```
+```go
 package main
 
 import (
@@ -90,7 +90,7 @@ func main() {
 
 **示例**
 
-```
+```go
 package main
 
 import (
@@ -141,7 +141,7 @@ func main() {
 **结构体示例**
 
 
-```
+```go
 package main
 
 import (
@@ -194,7 +194,7 @@ func main() {
 
 **结构体切片**
 
-```
+```go
 package main
 
 import (

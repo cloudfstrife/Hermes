@@ -2,13 +2,13 @@
 title: "Go逃逸分析"
 date: 2019-07-16T10:12:45+08:00
 categories:
-- golang
+- Go
 - analysis
 tags:
-- golang
+- Go
 - analysis
 keywords:
-- golang
+- Go
 - analysis
 ---
 
@@ -37,7 +37,7 @@ go run -gcflags '-m -l' xxxx.go
 
 cmd/main/main.go
 
-```
+```go
 package main
 
 import (

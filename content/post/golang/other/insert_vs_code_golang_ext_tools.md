@@ -2,14 +2,13 @@
 title: "Visual Studio Code安装Go语言插件扩展工具"
 date: 2018-12-10T16:51:09+08:00
 categories:
-- "golang"
-- "IDE"
+- Go
+- IDE
 tags:
-- "golang"
-- "go"
+- Go
 - "Visual Studio Code"
 keywords:
-- go
+- Go
 - vscode
 ---
 
