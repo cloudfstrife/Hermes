@@ -1,5 +1,5 @@
 ---
-title: "go Race - 非法竞态访问数据检测"
+title: "go race - 非法竞态访问数据检测"
 date: 2019-07-31T18:06:51+08:00
 categories:
 - Go
