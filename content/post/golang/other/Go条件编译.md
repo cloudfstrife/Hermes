@@ -1,6 +1,6 @@
 ---
 title: "Go条件编译"
-date: 2019-08-21T19:19:16+08:00
+date: 2019-08-21T18:19:16+08:00
 categories:
 - Go
 - other
@@ -115,3 +115,23 @@ package mypkg
 上面的源代码可能包含其他Go代码，但是该代码永远不会被编译。
 
 `godoc`这样的工具可以处理这样的代码，可能作为最终用户文档来使用。
+
+
+## 列出条件编译文件列表
+
+`go list` 子命令用于输出包名，每个一行。最有用的参数是 `-f` 和 `-json`，用于控制每个包的输出格式及内容。
+
+`-f`使用`template`包的语法，指定每个包的输出内容和格式。默认的输出是`{{.ImportPath}}`，传递给模板是`go/build`包中的[Packages](https://golang.org/pkg/go/build/#Package) 类型。
+
+跟据不同的`GOOS`，`go list`输出的GoFiles也不相同。
+
+示例：
+
+```
+$ export GOOS=linux
+$ go list -f '{{.GoFiles}}' os/exec
+[exec.go exec_unix.go lp_unix.go]
+$ export GOOS=windows
+$ go list -f '{{.GoFiles}}' os/exec
+[exec.go exec_windows.go lp_windows.go]
+```
