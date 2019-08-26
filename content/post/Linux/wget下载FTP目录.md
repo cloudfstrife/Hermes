@@ -2,14 +2,15 @@
 title: "wget下载FTP目录"
 date: 2019-08-09T09:40:33+08:00
 categories:
-- category
-- subcategory
+- Linux
 tags:
-- tag1
-- tag2
+- Linux
+- wget
+- mirror
 keywords:
-- tech
-#thumbnailImage: //example.com/image.jpg
+- Linux
+- wget
+- mirror
 ---
 
 Linux环境下使用`wget`同步ftp目录与本地目录
