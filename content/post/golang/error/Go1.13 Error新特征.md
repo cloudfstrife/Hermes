@@ -60,7 +60,58 @@ if errors.As(err,&target){
 `As`函数会逐层调用`Unwrap`函数并比较error链上的所有`error`是否与`target`匹配，如果匹配，则把匹配到的值设置到`target`并回返`true`。  
 如果`target`不是指向`error`类型或者`interface{}`类型的指针，则会`panic`，如果`err`为`nil`，返回`false`
 
+## 示例
+
+```
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+//BaseError is a Custom error
+type BaseError struct {
+	msg string
+}
+
+func (b BaseError) Error() string {
+	return fmt.Sprintf("BaseError Message : %s", b.msg)
+}
+
+var baseError = BaseError{msg: "Base"}
+
+func main() {
+	err := fmt.Errorf("Wrap 001 : %w", baseError)
+	err = fmt.Errorf("Wrap 002 : %w", err)
+	fmt.Println(err)
+
+	err = errors.Unwrap(err)
+	fmt.Println(err)
+
+	if errors.Is(err, baseError) {
+		fmt.Println("err Is baseError")
+	}
+
+	var anotherError BaseError
+	if errors.As(err, &anotherError) {
+		fmt.Printf("%v\n", anotherError)
+	}
+}
+
+```
+
+执行结果：
+
+```
+Wrap 002 : Wrap 001 : BaseError Message : Base
+Wrap 001 : BaseError Message : Base
+err Is baseError
+BaseError Message : Base
+```
+
 ---
 
 <span id="1">[1]</span> : 写这篇文章时，Go1.13版本还没有正式release，github仓库RC1分支的代码中没有`Wrapper`接口的定义，只是在`Unwrap`方法中引用了匿名的interface [参见](https://github.com/golang/go/blob/release-branch.go1.13/src/errors/wrap.go#L14)。  
 之所以称之为`Wrapper`接口是因为[https://github.com/golang/xerrors/blob/master/wrap.go#L12](https://github.com/golang/xerrors/blob/master/wrap.go#L12)中定义的接口是`Wrapper`。
+
