@@ -12,7 +12,7 @@ keywords:
 - error
 ---
 
-即将发布的Go1.13对`error`包进行了增强，新特征主要来自提案：[Proposal: Go 2 Error Inspection](https://go.googlesource.com/proposal/+/master/design/29934-error-values.md)。
+即将发布的Go1.13对`errors`包进行了增强，新特征主要来自提案：[Proposal: Go 2 Error Inspection](https://go.googlesource.com/proposal/+/master/design/29934-error-values.md)。
 
 <!--more-->
 
@@ -21,7 +21,7 @@ keywords:
 * 定义`Wrapper`接口（其实更应该称为`Unwrapper`）[\[1\]](#1)，用于Unwrap操作。
 * `errors`包新增了`func Is(err, target error) bool`和`func As(err error, target interface{}) bool`函数，用于比较和断言error。
 * 定义了`func Unwrap(err error) error`用于快速Unwrap错误。
-* `fmt`包的`Errorf`方法修改了实现，增加新的verb`%w`，`%w`只接受Error类型的参数，用于快速Wrap错误。
+* `fmt`包的`Errorf`方法修改了实现，增加新的verb`%w`，`%w`只接受error类型的参数，用于快速Wrap错误。
 
 ## 包装错误
 
