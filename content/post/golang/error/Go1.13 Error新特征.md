@@ -104,6 +104,7 @@ func main() {
 执行结果：
 
 ```
+$ go run main.go
 Wrap 002 : Wrap 001 : BaseError Message : Base
 Wrap 001 : BaseError Message : Base
 err Is baseError
