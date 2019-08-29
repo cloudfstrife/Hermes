@@ -213,3 +213,11 @@ canonifyurls = true
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   [params.footer]
 	copyright = "<a href=\"https://github.com/cloudfstrife\">Cloud Strife</a>"
+
+  [params.gitalk]
+	enable = true
+	clientID = "a8fe5beb4164463f8bbd"
+	clientSecret = "378608121acf62df80fee753708930b20f9447d0"
+	repo = "bitlogs"
+	owner = "cloudfstrife"
+	admin = ["cloudfstrife"]

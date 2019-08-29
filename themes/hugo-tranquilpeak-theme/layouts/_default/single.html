@@ -39,6 +39,11 @@
                 {{ partial "post/disqus.html" . }}
               {{ end }}
             {{ end }}
+			
+			{{ if not (eq .Params.gitalk false) }}
+			  {{ partial "post/gitalk.html" . }}
+            {{ end }}
+			
           </div>
         </article>
         {{ partial "footer.html" . }}
