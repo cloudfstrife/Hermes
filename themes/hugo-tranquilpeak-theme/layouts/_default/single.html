@@ -40,9 +40,7 @@
               {{ end }}
             {{ end }}
 			
-			{{ if not (eq .Params.gitalk false) }}
-			  {{ partial "post/gitalk.html" . }}
-            {{ end }}
+			{{ partial "post/gitalk.html" . }}
 			
           </div>
         </article>
