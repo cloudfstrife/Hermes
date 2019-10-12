@@ -282,7 +282,7 @@ go 1.12
 
 ```
 
-** fibonacci/fibonacci.go**
+**fibonacci/fibonacci.go**
 
 ```go
 package fibonacci
