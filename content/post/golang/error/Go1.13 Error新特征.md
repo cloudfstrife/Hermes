@@ -111,8 +111,17 @@ err Is baseError
 BaseError Message : Base
 ```
 
+## 建议
+
+> 仅包装来自公共函数或方法的错误。否则就直接传播错误。
+
+## 参考链接
+
+[When to wrap errors](https://www.efekarakus.com/golang/2019/09/26/when-to-wrap-errors.html)
+
 ---
 
 <span id="1">[1]</span> : 写这篇文章时，Go1.13版本还没有正式release，github仓库RC1分支的代码中没有`Wrapper`接口的定义，只是在`Unwrap`方法中引用了匿名的interface [参见](https://github.com/golang/go/blob/release-branch.go1.13/src/errors/wrap.go#L14)。  
 之所以称之为`Wrapper`接口是因为[https://github.com/golang/xerrors/blob/master/wrap.go#L12](https://github.com/golang/xerrors/blob/master/wrap.go#L12)中定义的接口是`Wrapper`。
+
 
