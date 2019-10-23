@@ -1,6 +1,6 @@
 ---
-title: "freebsd安装"
-date: 2019-10-23T10:51:26+08:00
+title: "安装freebsd"
+date: 2019-10-23T18:21:26+08:00
 categories:
 - freebsd
 tags:
