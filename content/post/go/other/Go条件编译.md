@@ -97,7 +97,7 @@ source_windows_amd64.go
 - `go1.10`, 代表Go编译器版本大于1.10时编译
 - `go1.11`, 代表Go编译器版本大于1.11时编译
 - `go1.12`, 代表Go编译器版本大于1.12时编译
-- ctxt.BuildTags列出的其它标识
+- `ctxt.BuildTags`列出的其它标识
 
 ## Binary-Only Packages
 
