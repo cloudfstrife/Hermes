@@ -102,8 +102,8 @@ Visual Studio Code编辑器有一款可用实时预览Graphviz的插件：[Graph
 Graphviz中包含了众多的布局器，常用的有以下几个
 
 * **dot** - 默认布局方式，主要用于有向图 
-* **neato** - "spring model"布局，适用于不是太大图形（小于100个节点），Neato尝试全局能量最小化函数，等效于多维度统计缩放（图形学算法相关概念，不是很懂，原文是`Neato attempts to minimize a global energy function, which is equivalent to statistical multi-dimensional scaling.`）。
-* **fdp** - 类似于neato的"spring model"布局，不同的是他使用减小力量(`reducing forces`)，而不是能量(`working with energy`)
+* **neato** - `spring model`布局，适用于不是太大图形（小于100个节点），Neato尝试全局能量最小化函数，等效于多维度统计缩放（图形学算法相关概念，不是很懂，原文是`Neato attempts to minimize a global energy function, which is equivalent to statistical multi-dimensional scaling.`）。
+* **fdp** - 类似于neato的`spring model`布局，不同的是他使用减小力量(`reducing forces`)，而不是能量(`working with energy`)
 * **sfdp** - 多尺寸的fdp，用于大型图布局
 * **twopi** - 径向布局，节点放置在同心圆上，位置取决于节点与指定根节点的距离。
 * **circo** - 环形布局，适用于某些特定的多重循环结构图，例如电信网络等。
