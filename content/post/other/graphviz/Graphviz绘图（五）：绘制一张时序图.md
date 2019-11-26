@@ -81,3 +81,31 @@ dot -T svg -o Testing.svg Testing.dot
 ```
 
 ![001](/images/other/graphviz/5/001.svg)
+
+解释：
+
+> `service_01:sw->gateway_02[label="send response"]` 中的 `sw` 是定义节点与边缘的连接点位置，取值为：`n` , `ne` , `e` , `se` , `s` , `sw` , `w` , `nw` , `c` , `_`，默认为`_`。
+>
+> * n - north 北，指图形正上方
+>
+> * w - west 西，指图形正左方
+>
+> * s - south 南，指图形正下方
+>
+> * e - east 东，指图形正右方
+>
+> * ne - northeast 东北，指图形右上角
+>
+> * nw - northwest 西北，指图形左上角
+>
+> * se - southeast 东南，指图形右下方
+>
+> * sw - southwest 西南，指图形左下方
+>
+> * c - Center 中心
+>
+> * _ - 默认值 表示图形适当的一侧
+
+---
+
+> graph的 `splines` 属性指定的边缘的线型取值参见：[Node, Edge and Graph Attributes:splines](https://graphviz.gitlab.io/_pages/doc/info/attrs.html#d:splines)
