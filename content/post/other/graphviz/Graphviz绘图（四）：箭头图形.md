@@ -57,7 +57,7 @@ digraph g{
 }
 ```
 
-![002](/images/other/graphviz/4/003.svg)
+![003](/images/other/graphviz/4/003.svg)
 
 ## 箭头形状
 
@@ -95,7 +95,7 @@ digraph g{
 }
 ```
 
-![002](/images/other/graphviz/4/004.svg)
+![004](/images/other/graphviz/4/004.svg)
 
 > 示例中的`boxdiamondnonevee`是 `box` , `diamond` , `none` , `vee` 四种箭头的组合
 
@@ -116,7 +116,7 @@ digraph g{
 }
 ```
 
-![002](/images/other/graphviz/4/005.svg)
+![005](/images/other/graphviz/4/005.svg)
 
 > `lboxordiamondnonevee` 拆分为 `l` , `box` , `o` , `r` , `diamond` , `none` , `vee` 。
 
