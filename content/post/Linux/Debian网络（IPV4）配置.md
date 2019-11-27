@@ -95,7 +95,7 @@ sudo ifconfig eth0 xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx up
 ### 配置网关
 
 ```
-sudo route del default gw	                          # 删除旧的默认网关
+sudo route del default	                              # 删除旧的默认网关
 sudo route add default gw xxx.xxx.xxx.xxx             # 建立新的默认网关
 sudo route											  # 查看路由表
 ```
