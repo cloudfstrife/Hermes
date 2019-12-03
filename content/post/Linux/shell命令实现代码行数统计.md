@@ -3,7 +3,7 @@ title: "Shell命令实现代码行数统计"
 date: 2019-10-28T18:10:41+08:00
 categories:
 - linux
-- command
+- shell
 tags:
 - linux
 keywords:
