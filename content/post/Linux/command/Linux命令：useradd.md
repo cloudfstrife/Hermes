@@ -32,7 +32,7 @@ useradd [-d home] [-s shell] [-c comment] [-m [-k template]] [-f inactive] [-e e
 * **-e** ：指定账号的失效日期，日期格式为 `MM/DD/YY` ，例如 `01/01/19` 。缺省表示永久有效
 * **-f** ：指定在密码过期后多少天即关闭该账号。如果为0账号立即被停用；如果为-1则账号一直可用。默认值为 `-1`
 * **-g** ：指定用户所属的群组。值可以使组名也可以是GID。用户组必须已经存在的，期默认值为100，即 `users`
-* **-G** ：指定用户所属的附加群组
+* **-G** ：指定用户所属的附加群组，每个群组使用 `,` 分隔，不可以使用空白字符
 * **-m** ：自动建立用户的登入目录
 * **-M** ：不要自动建立用户的登入目录
 * **-n** ：取消建立以用户名称为名的群组
@@ -45,5 +45,5 @@ useradd [-d home] [-s shell] [-c comment] [-m [-k template]] [-f inactive] [-e e
 示例：
 
 ```
-sudo useradd -d /home/test -m -g test -G sudo -s /bin/bash test 
+sudo useradd -d /home/test -m -g users -G sudo -s /bin/bash test
 ```
