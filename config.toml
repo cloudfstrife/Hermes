@@ -15,7 +15,7 @@
 baseURL = "https://www.bitlogs.tech"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "| Cloud Strife | make the world a better place |"
+title = "| Cloud Strife | (´▽｀)ノ ♪♬♫♬ |"
 theme = "hugo-tranquilpeak-theme"
 # disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -32,7 +32,7 @@ canonifyurls = true
 
 [author]
   name = "Cloud Strife"
-  bio = "ヾ(≧∇≦*)ゝ ♬♫♬♪♫"
+  bio = "make the world a better place"
   job = "Develop"
   location = "7th Heaven"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
