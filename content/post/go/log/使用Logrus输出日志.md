@@ -20,7 +20,7 @@ logrus是go语言的结构化日志程序，完全兼容于标准库log的API。
 
 >Case-sensitivity
 >
-> 该组织的名称已更改为小写——并且不会再更改回来，如果由于大小写敏感而导致导入冲突，请使用小写的import: github.com/sirupsen/logrus。
+> 该组织的名称已更改为小写——并且不会再更改回来，如果由于大小写敏感而导致导入冲突，请使用小写的 `import: github.com/sirupsen/logrus`。
 
 ## 示例
 
@@ -240,7 +240,7 @@ import (
   log "github.com/sirupsen/logrus"
 )
 
-init() {
+func init() {
   // do something here to set environment depending on an environment variable
   // or command-line flag
   if Environment == "production" {
@@ -395,4 +395,4 @@ logrus.RegisterExitHandler(handler)
 
 ## 参考链接
 
-[https://github.com/sirupsen/logrus/](https://github.com/sirupsen/logrus/)
+[1] [https://github.com/sirupsen/logrus/](https://github.com/sirupsen/logrus/)
