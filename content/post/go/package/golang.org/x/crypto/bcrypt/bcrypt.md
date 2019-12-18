@@ -1,5 +1,5 @@
 ---
-title: "bcrypt"
+title: "Go语言bcrypt加密和校验"
 date: 2019-12-18T09:03:07+08:00
 categories:
 - Go
@@ -18,7 +18,7 @@ keywords:
 - bcrypt
 ---
 
-bcrypt是一个由Niels Provos以及David Mazières根据Blowfish加密演算法所设计的密码杂凑函式，于1999年在USENIX中展示。实作中bcrypt会使用一个加盐的流程以防御彩虹表攻击，同时bcrypt还是适应性函式，它可以借由增加叠代之次数来抵御日益增进的电脑运算能力透过暴力法破解。[来自维基百科] 
+`bcrypt`是一个由Niels Provos以及David Mazières根据`blowfish`加密演算法所设计的密码杂凑函式，于1999年在USENIX中展示。实作中`bcrypt`会使用一个加盐的流程以防御彩虹表攻击，同时`bcrypt`还是适应性函式，它可以借由增加迭代次数来抵御日益增进的电脑运算能力的暴力法破解。[来自维基百科] 
 
 <!--more-->
 
