@@ -207,3 +207,11 @@ PageUP/PageDn切换上/下页讯息。
 /ignore * JOINS
 /ignore * PARTS
 ```
+
+## freenode 中文频道 
+
+```
+/join #go-nuts
+/join #debian-cn
+/join #golang.tw
+```
