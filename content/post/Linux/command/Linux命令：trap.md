@@ -18,7 +18,7 @@ keywords:
 
 <!--more-->
 
-## 法
+## 用法
 
 ```
 $ trap --help

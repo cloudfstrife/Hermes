@@ -1,6 +1,6 @@
 ---
 title: "技巧：m3u8合并生成MP4"
-date: 2019-12-31T12:36:08+08:00
+date: 2019-12-31T10:36:08+08:00
 categories:
 - other
 - technique
