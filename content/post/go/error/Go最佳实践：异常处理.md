@@ -1,6 +1,7 @@
 ---
 title: "Go最佳实践：异常处理"
 date: 2019-12-31T15:47:09+08:00
+categories:
 - Go
 - error
 tags:
