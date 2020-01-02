@@ -16,7 +16,7 @@ nginx配置静态站点与SSL
 
 ```
 server {
-	listen 443 ssl;
+	listen 443 ssl http2;
 	server_name www.bitlogs.tech bitlogs.tech;
 	ssl on;
 	ssl_certificate /etc/letsencrypt/live/bitlogs.tech/fullchain.pem;
