@@ -41,23 +41,18 @@ package fibonacci
 
 //Fibonacci 返回n以内的斐波那契数列元素
 func Fibonacci(n int64) []int64 {
-        result := make([]int64, 0)
-        var x, y int64 = 1, 2
-        if n >= x {
-                result = append(result, x)
-        }
-        if n >= y {
-                result = append(result, y)
-        }
-        for {
-			x, y = y, x+y
-			if y >= n {
-				break
-			}
-			result = append(result, y)
-        }
-        return result
+	result := []int64{0, 1}
+	if n < 1 {
+		return result
+	}
+	c := result[0] + result[1]
+	for i := int64(2); c < n; i, c = i+1, result[i]+result[i-1] {
+		result = append(result, c)
+	}
+
+	return result
 }
+
 ```
 
 ### 编写测试代码
