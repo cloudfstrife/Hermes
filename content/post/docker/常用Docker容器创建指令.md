@@ -75,6 +75,23 @@ sudo docker run  -d --name memcached \
 memcached memcached -m 64
 ```
 
+##
+
+```
+docker run -d --name rabbitmq \
+--hostname rabbitmq \
+-p "4369:4369" \
+-p "5671:5671" \
+-p "5672:5672" \
+-p "15671:15671" \
+-p "15672:15672" \
+-p "25672:25672" \
+-v /data/docker/rabbitmq:/var/lib/rabbitmq \
+-e RABBITMQ_DEFAULT_USER="rabbitmq_user_name" \
+-e RABBITMQ_DEFAULT_PASS="rabbitmq_pass_word" \
+rabbitmq:3.8.2-management
+
+```
 
 ## 备注
 
