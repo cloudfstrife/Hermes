@@ -1,6 +1,6 @@
 ---
 title: "Linux信号机制"
-date: 2019-10-30T10:31:11+08:00
+date: 2019-10-30T19:31:11+08:00
 categories:
 - Linux
 tags:

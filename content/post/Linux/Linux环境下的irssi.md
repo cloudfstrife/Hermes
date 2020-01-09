@@ -1,6 +1,6 @@
 ---
 title: "Linux环境下的irssi"
-date: 2018-12-26T17:04:52+08:00
+date: 2018-12-26T17:44:52+08:00
 categories:
 - Linux
 tags:

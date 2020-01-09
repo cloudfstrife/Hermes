@@ -1,6 +1,6 @@
 ---
 title: "nginx开启HTTP2"
-date: 2020-01-02T16:13:16+08:00
+date: 2020-01-02T18:13:16+08:00
 categories:
 - Other
 - nginx

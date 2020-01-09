@@ -1,6 +1,6 @@
 ---
 title: "Linux命令行下刻录光盘"
-date: 2019-04-18T09:08:02+08:00
+date: 2019-04-18T19:08:02+08:00
 categories:
 - Linux
 tags:

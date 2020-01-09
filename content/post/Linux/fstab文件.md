@@ -1,6 +1,6 @@
 ---
 title: "fstab文件"
-date: 2019-02-20T14:07:47+08:00
+date: 2019-02-20T12:07:47+08:00
 categories:
 - Linux
 tags:

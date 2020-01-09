@@ -1,6 +1,6 @@
 ---
 title: "Linux命令：trap"
-date: 2019-12-31T09:47:47+08:00
+date: 2019-12-31T19:47:47+08:00
 categories:
 - linux
 - command

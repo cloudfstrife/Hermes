@@ -1,6 +1,6 @@
 ---
 title: "Linux命令：userdel"
-date: 2019-12-09T14:30:11+08:00
+date: 2019-12-09T18:30:11+08:00
 categories:
 - linux
 - command

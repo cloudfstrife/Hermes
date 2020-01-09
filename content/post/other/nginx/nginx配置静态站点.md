@@ -1,6 +1,6 @@
 ---
 title: "nginx配置静态站点"
-date: 2019-05-18T16:14:39+08:00
+date: 2019-05-18T17:44:39+08:00
 categories:
 - Other
 - nginx

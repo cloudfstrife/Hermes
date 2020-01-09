@@ -1,6 +1,6 @@
 ---
 title: "常见的GC算法"
-date: 2019-04-12T15:13:01+08:00
+date: 2019-04-12T12:13:01+08:00
 categories:
 - other
 - GC

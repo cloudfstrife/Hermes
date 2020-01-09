@@ -1,6 +1,6 @@
 ---
 title: "wget下载FTP目录"
-date: 2019-08-09T09:40:33+08:00
+date: 2019-08-10T09:40:33+08:00
 categories:
 - Linux
 tags:

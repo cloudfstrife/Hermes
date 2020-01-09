@@ -1,6 +1,6 @@
 ---
 title: "GNU Parted"
-date: 2018-12-26T16:32:17+08:00
+date: 2018-12-26T18:32:17+08:00
 categories:
 - Linux
 tags:

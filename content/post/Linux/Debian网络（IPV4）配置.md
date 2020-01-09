@@ -1,6 +1,6 @@
 ---
 title: "Debian网络（IPV4）配置"
-date: 2019-11-27T12:30:00+08:00
+date: 2019-11-27T12:20:00+08:00
 categories:
 - Linux
 tags:

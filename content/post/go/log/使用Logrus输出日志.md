@@ -1,6 +1,6 @@
 ---
 title: "使用logrus输出日志"
-date: 2019-03-18T15:16:31+08:00
+date: 2019-03-18T12:16:31+08:00
 categories:
 - Go
 - log

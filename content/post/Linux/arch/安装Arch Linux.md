@@ -1,6 +1,6 @@
 ---
 title: "安装Arch Linux"
-date: 2019-04-09T15:08:06+08:00
+date: 2019-04-09T12:08:06+08:00
 categories:
 - Linux
 - Arch

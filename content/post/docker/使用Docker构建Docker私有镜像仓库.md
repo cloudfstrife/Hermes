@@ -1,6 +1,6 @@
 ---
 title: "使用Docker构建Docker私有镜像仓库"
-date: 2019-03-13T10:05:58+08:00
+date: 2019-03-13T18:15:58+08:00
 categories:
 - Docker
 tags:

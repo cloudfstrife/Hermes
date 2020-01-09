@@ -1,6 +1,6 @@
 ---
 title: "go doc 与 godoc"
-date: 2019-11-19T14:13:52+08:00
+date: 2019-11-19T12:13:52+08:00
 categories:
 - Go
 - command

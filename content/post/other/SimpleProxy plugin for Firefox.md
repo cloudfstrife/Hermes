@@ -1,6 +1,6 @@
 ---
 title: "SimpleProxy Plugin for Firefox"
-date: 2019-06-27T16:16:22+08:00
+date: 2019-06-27T18:16:22+08:00
 categories:
 - other
 - subcategory

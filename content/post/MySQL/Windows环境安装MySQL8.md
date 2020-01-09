@@ -1,6 +1,6 @@
 ---
 title: "Windows环境安装MySQL8"
-date: 2019-03-26T15:29:48+08:00
+date: 2019-03-26T20:29:48+08:00
 categories:
 - Database
 - MySQL
