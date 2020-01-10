@@ -1,5 +1,5 @@
 ---
-title: "Shell中处理带空格的文件名"
+title: "shell中处理带空格的文件名"
 date: 2019-09-10T18:36:08+08:00
 categories:
 - Linux
