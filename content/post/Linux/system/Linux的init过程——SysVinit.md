@@ -7,9 +7,11 @@ categories:
 tags:
 - linux
 - init
+- SysVinit
 keywords:
 - linux
 - init
+- SysVinit
 ---
 
 Linux 操作系统的启动首先从 BIOS 开始，进而从磁盘加载MBR，接下来进入 bootloader，载入内核，完成内核初始化。内核初始化的最后一步是启动 pid 为 `1` 的**init进程**，这个进程是系统的第一个进程，它负责产生其他用户进程。  
