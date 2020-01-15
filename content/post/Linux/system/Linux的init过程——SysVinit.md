@@ -69,6 +69,9 @@ S 级别往往用于系统故障之后的排错和恢复。
 
 ```
 #!/bin/sh
+#
+# description
+# chkconfig: 2345 92 65
 
 ### BEGIN INIT INFO
 # Provides:          
@@ -108,15 +111,17 @@ exit 0
 
 ```
 
+> `# chkconfig: 2345 92 65` 是 chkconfig 的指令，定义应在哪个运行级别启用该服务，同时指定了在创建启动和终止脚本的链接时要使用的编号。
+
 `### BEGIN INIT INFO` 到 `### END INIT INFO`之间的注释是运行时依赖注释，块内注释格式为 `# {keyword}: arg1 [arg2...]`
 
 | 名称                | 说明                                         |
 | ------------------- | -------------------------------------------- |
-| `Provides`          | 定义脚本所提供的组件名称(或许不应该称为组件) |
-| `Required-Start`    | 定义脚本需要依赖的组件                       |
-| `Required-Stop`     | 定义脚本供哪些组件依赖                       |
-| `Should-Start`      | 定义脚本需要依赖的基础组件，非强制依赖       |
-| `Should-Stop`       | 定义脚本供哪些组件依赖，非强制依赖           |
+| `Provides`          | 定义脚本所提供的服务名称                     |
+| `Required-Start`    | 定义脚本需要依赖的服务                       |
+| `Required-Stop`     | 定义脚本供哪些服务依赖                       |
+| `Should-Start`      | 定义脚本需要依赖的基础服务，非强制依赖       |
+| `Should-Stop`       | 定义脚本供哪些服务依赖，非强制依赖           |
 | `Default-Start`     | 定义默认情况下应在哪些运行级别启动脚本       |
 | `Default-Stop`      | 定义默认情况下应在哪些运行级别停止脚本       |
 | `Short-Description` | 短说明                                       |
@@ -134,3 +139,23 @@ exit 0
 | `$syslog`    | 系统日志服务                                      |
 | `$time`      | 系统时间已设定                                    |
 | `$all`       | 所有不依赖于`$all`的脚本                          |
+
+## init 服务管理
+
+启动服务
+
+```
+service 服务名 start 
+```
+
+关闭服务
+
+```
+service 服务名 stop
+```
+
+重启服务
+
+```
+service 服务名 restart 
+```
