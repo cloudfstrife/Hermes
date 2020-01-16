@@ -275,3 +275,27 @@ $ sudo systemctl enable Unit名称
 ```
 $ sudo systemctl disable Unit名称
 ```
+
+查看配置文件
+
+```
+$ sudo systemctl cat Unit名称
+```
+
+获取默认启动的target
+
+```
+$ sudo systemctl get-default
+```
+
+列出指定target依赖的单元
+
+```
+$ sudo systemctl list-dependencies target名称
+```
+
+修改配置文件以后重新加载配置文件
+
+```
+$ sudo systemctl daemon-reload
+```
