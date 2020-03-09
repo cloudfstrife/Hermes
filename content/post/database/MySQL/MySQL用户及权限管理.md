@@ -138,6 +138,7 @@ GRANT 权限列表 ON 权限作用域 TO 用户名@<host> [IDENTIFIED BY '密码
 ```
 grant all privileges  on xxxx.* to username@'%';
 grant super on *.* to xxxx@'%';
+flush privileges;
 ```
 
 > flush privileges表示刷新权限。
