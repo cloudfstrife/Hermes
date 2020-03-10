@@ -18,8 +18,10 @@ keywords:
 
 **Windows PowerShell** 
 
-[install_vs_code_golang_ext_tools.ps1](https://github.com/cloudfstrife/backup/blob/develop/shell/golang/install_vs_code_golang_ext_tools.ps1)
+[install_vs_code_go_ext_tools.ps1](https://github.com/cloudfstrife/backup/blob/develop/shell/go/install_vs_code_go_ext_tools.ps1)
 
 **Linux Shell**
 
-[install_vs_code_golang_ext_tools.sh](https://github.com/cloudfstrife/backup/blob/develop/shell/golang/install_vs_code_golang_ext_tools.sh)
+[install_vs_code_go_ext_tools.sh](https://github.com/cloudfstrife/backup/blob/develop/shell/go/install_vs_code_go_ext_tools.sh)
+
+> 注意:脚本依赖于同目录下的 [all_tools_information.csv](https://github.com/cloudfstrife/backup/blob/develop/shell/go/all_tools_information.csv) 文件
