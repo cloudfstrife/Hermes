@@ -51,7 +51,7 @@ sudo docker run  -dit --name mysql \
 -v /data/docker/mysql/log:/var/log/mysql \
 -v /etc/localtime:/etc/localtime \
 -p 3306:3306 \
-mysql
+mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 ```
 
 
