@@ -149,7 +149,7 @@ chmod o+t /path/to/file
 chmod o-t /path/to/file
 
 ## 数字表示法
-## 设置SGID 基础权限前面加 2
+## 设置SGID 基础权限前面加 1
 chmod 1755 /path/to/file
 ## 删除SGID
 chmod 0755 /path/to/file
