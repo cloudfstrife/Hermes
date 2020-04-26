@@ -28,18 +28,17 @@ func TestFibonacci(t *testing.T) {
 	})
 	t.Run("value one", func(t *testing.T) {
 		got := Fibonacci(1)
-		if !reflect.DeepEqual(got, []int64{0, 1, 1}) {
+		if !reflect.DeepEqual(got, []int64{1, 1}) {
 			t.Errorf("test case [ %s ] faild : want :%#v got :%#v", "value one", []int64{0, 1, 1}, got)
 		}
 	})
 	t.Run("value 5 million", func(t *testing.T) {
 		got := Fibonacci(5000000)
-		if !reflect.DeepEqual(got, []int64{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578}) {
+		if !reflect.DeepEqual(got, []int64{1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578}) {
 			t.Errorf("test case [ %s ] faild : want :%#v got :%#v", "value 5  million", []int64{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578}, got)
 		}
 	})
 }
-
 ```
 
 `testing.T`和`testing.B`都允许通过`Run`方法定义子测试和子基准。使用这样的方式，可以创建多层次的测试代码，同时可以共享初始化与收尾的代码。

@@ -44,18 +44,16 @@ func Fibonacci(n int64) []int64 {
 	if n < 0 {
 		return []int64{}
 	}
-	result := []int64{0, 1, 1}
+	result := []int64{1, 1}
 	if n <= 1 {
 		return result
 	}
-	c := result[1] + result[2]
-	for i := int64(3); c <= n; i, c = i+1, result[i]+result[i-1] {
+	c := result[0] + result[1]
+	for i := int64(2); c <= n; i, c = i+1, result[i]+result[i-1] {
 		result = append(result, c)
 	}
-
 	return result
 }
-
 ```
 
 ### 编写测试代码
@@ -86,33 +84,34 @@ func TestFibonacci(t *testing.T) {
 		},
 		"value one": {
 			input: 1,
-			want:  []int64{0, 1, 1},
+			want:  []int64{1, 1},
 		},
 		"value 5  million": {
 			input: 5000000,
-			want:  []int64{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578},
+			want:  []int64{1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578},
 		},
 	}
 
 	for CaseName, CaseVal := range TestCases {
-		got := Fibonacci(CaseVal.input)
-		if !reflect.DeepEqual(got, CaseVal.want) {
-			t.Errorf("test case [ %s ] faild : want :%#v got :%#v", CaseName, CaseVal.want, got)
-		}
+		t.Run(CaseName, func(t *testing.T) {
+			got := Fibonacci(CaseVal.input)
+			if !reflect.DeepEqual(got, CaseVal.want) {
+				t.Errorf("test case [ %s ] faild : want :%#v got :%#v", CaseName, CaseVal.want, got)
+			}
+		})
 	}
 }
 func BenchmarkFibonacci(b *testing.B) {
-	for index := 3; index < b.N; index++ {
-		Fibonacci(int64(b.N))
+	var i int64 = 1000000
+	for index := 0; index < b.N; index++ {
+		Fibonacci(i)
 	}
-
 }
 
 func ExampleFibonacci() {
 	fmt.Println(Fibonacci(1))
-	//Output:[0 1 1]
+	//Output:[1 1]
 }
-
 ```
 
 go语言的测试代码应该与被测试代码放在相同的包里，测试源代码文件以`_test.go`结尾。
@@ -129,9 +128,9 @@ go语言的测试代码应该与被测试代码放在相同的包里，测试源
 
 在上面的代码中，使用了一些技巧。
 
-* TestFibonacci函数中，创建了一个map，map的key为测试用例名称，value为一个匿名struct，此struct属性包含一个int64的输入参数和一个int64切片的预期结果。执行测试时，循环map的元素，调用被测试函数，并比较测试结果是否与预期结果相同。这样写的好处是不需要为每个测试用例编写一个方法，同时减少代码冗余。当需要新增测试用例时，只需要向map中添加新的元素，重新测试即可。
-* 在结果验证时，当验证失败，使用`t.Errorf`而不使用`t.Fatalf`，这样的写法防止一个测试用例失败，后面的测试用例就不执行了。这样的写法执行一次测试，即可看出哪些用例失败。
-* 在输出时，使用`%#V`而不是`%v`，这样的输出，可以更清晰，更可读的输出结果差异。
+> * `TestFibonacci`函数中，创建了一个map，map的key为测试用例名称，value为一个匿名struct，此struct属性包含一个int64的输入参数和一个int64切片的预期结果。执行测试时，循环map的元素，通过`t.Run()`启动子测试，调用被测试函数，并比较测试结果是否与预期结果相同。这样写的好处是不需要为每个测试用例编写一个方法，同时减少代码冗余。当需要新增测试用例时，只需要向map中添加新的元素，重新测试即可。  
+> * 在结果验证时，当验证失败，使用`t.Errorf`而不使用`t.Fatalf`，这样的写法防止一个测试用例失败，后面的测试用例就不执行了。执行一次测试，即可看出哪些用例失败。  
+> * 在输出时，使用`%#v`而不是`%v`，这样的输出，可以更清晰，更可读的输出结果差异。  
 
 ## 执行单元测试
 
