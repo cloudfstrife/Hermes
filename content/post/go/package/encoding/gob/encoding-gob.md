@@ -41,7 +41,7 @@ struct { A, B int }
 
 **可编码或者可解码的类型**
 
-```
+```go
 struct { A, B int }	// the same
 *struct { A, B int }	// extra indirection of the struct
 struct { *A, **B int }	// extra indirection of the fields
@@ -54,7 +54,7 @@ struct { B, C int }	// missing field (A) ignored; extra field (C) ignored.
 
 **尝试接收这些类型将返回错误**
 
-```
+```go
 struct { A int; B uint }	// change of signedness for B
 struct { A int; B float }	// change of type for B
 struct { }			// no field names in common
@@ -65,14 +65,14 @@ struct { C, D int }		// no field names in common
 
 ### 注册
 
-```
+```go
 func Register(value interface{})
 func RegisterName(name string, value interface{})
 ```
 
 ### 编码
 
-```
+```go
 func NewDecoder(r io.Reader) *Decoder
 func (dec *Decoder) Decode(e interface{}) error
 func (dec *Decoder) DecodeValue(v reflect.Value) error
@@ -80,7 +80,7 @@ func (dec *Decoder) DecodeValue(v reflect.Value) error
 
 ### 解码
 
-```
+```go
 func NewEncoder(w io.Writer) *Encoder
 func (enc *Encoder) Encode(e interface{}) error
 func (enc *Encoder) EncodeValue(value reflect.Value) error
@@ -88,7 +88,7 @@ func (enc *Encoder) EncodeValue(value reflect.Value) error
 
 ## 基础示例
 
-```
+```go
 package main
 
 import (
@@ -138,7 +138,7 @@ func main() {
 
 ## 切片示例
 
-```
+```go
 package main
 
 import (
@@ -183,7 +183,7 @@ func main() {
 
 ## 自定义编码解码器
 
-```
+```go
 package main
 
 import (
@@ -247,7 +247,7 @@ func main() {
 
 **encoding.BinaryMarshaler**
 
-```
+```go
 type BinaryMarshaler interface {
     MarshalBinary() (data []byte, err error)
 }
@@ -255,7 +255,7 @@ type BinaryMarshaler interface {
 
 **encoding.BinaryUnmarshaler**
 
-```
+```go
 type BinaryUnmarshaler interface {
     UnmarshalBinary(data []byte) error
 }
@@ -264,7 +264,7 @@ type BinaryUnmarshaler interface {
 
 **GobEncoder**
 
-```
+```go
 type GobEncoder interface {
     // GobEncode returns a byte slice representing the encoding of the
     // receiver for transmission to a GobDecoder, usually of the same
@@ -275,7 +275,7 @@ type GobEncoder interface {
 
 **GobDecoder**
 
-```
+```go
 type GobDecoder interface {
     // GobDecode overwrites the receiver, which must be a pointer,
     // with the value represented by the byte slice, which was written
@@ -288,7 +288,7 @@ type GobDecoder interface {
 
 以下示例展示如何序列化接口值，与常规struct类型的区别在于，使用`func Register(value interface{})`函数注册接口实现类型。
 
-```
+```go
 package main
 
 import (

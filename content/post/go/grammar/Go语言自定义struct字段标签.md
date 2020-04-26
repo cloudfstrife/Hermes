@@ -20,7 +20,7 @@ keywords:
 
 ## 语法
 
-```
+```go
 type struct_name struct {
 	field_name field_type `tag_key_1:"tag_value_1" tag_key_2:"tag_value_2"`
 }
@@ -31,7 +31,7 @@ type struct_name struct {
 
 ## 示例
 
-```
+```go
 package main
 
 import (

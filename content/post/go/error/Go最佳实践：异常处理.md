@@ -18,7 +18,7 @@ keywords:
 
 #### 为package定义必要的错误类型
 
-```
+```go
 type ErrSomething struct {
     message string
 }

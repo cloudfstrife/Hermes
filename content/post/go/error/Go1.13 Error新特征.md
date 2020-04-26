@@ -62,7 +62,7 @@ if errors.As(err,&target){
 
 ## 示例
 
-```
+```go
 package main
 
 import (

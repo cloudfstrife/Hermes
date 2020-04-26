@@ -26,7 +26,7 @@ keywords:
 
 函数签名：
 
-```
+```go
 func Equal(x, y interface{}, opts ...Option) bool
 ```
 

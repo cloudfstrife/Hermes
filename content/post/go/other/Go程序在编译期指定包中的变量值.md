@@ -52,7 +52,7 @@ require (
 
 **main.go**
 
-```
+```go
 package main
 
 import (
@@ -77,7 +77,7 @@ func main() {
 
 **version/version.go**
 
-```
+```go
 package version
 
 import "fmt"

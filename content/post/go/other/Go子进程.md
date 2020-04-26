@@ -197,7 +197,7 @@ cmd.Wait()
 
 **示例**
 
-```
+```go
 package main
 
 import (

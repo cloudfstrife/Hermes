@@ -17,7 +17,7 @@ keywords:
 
 **示例**
 
-```
+```go
 package main
 
 import (
