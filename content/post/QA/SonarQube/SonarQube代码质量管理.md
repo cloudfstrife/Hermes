@@ -45,12 +45,12 @@ docker pull sonarqube:7.4-community
 
 本示例使用命令行方式。可以跟据项目和环境选择合适的Scanner
 
-> SonarQube Scanner for MSBuild: Launch analysis of .Net projects
-> SonarQube Scanner for Maven: Launch analysis from Maven with minimal configuration
-> SonarQube Scanner for Gradle: Launch Gradle analysis
-> SonarQube Scanner for Ant: Launch analysis from Ant
-> SonarQube Scanner For Jenkins: Launch analysis from Jenkins
-> SonarQube Scanner: Launch analysis from the command line when none of the other analyzers is appropriate
+> SonarQube Scanner for MSBuild: Launch analysis of .Net projects  
+> SonarQube Scanner for Maven: Launch analysis from Maven with minimal configuration  
+> SonarQube Scanner for Gradle: Launch Gradle analysis  
+> SonarQube Scanner for Ant: Launch analysis from Ant  
+> SonarQube Scanner For Jenkins: Launch analysis from Jenkins  
+> SonarQube Scanner: Launch analysis from the command line when none of the other analyzers is appropriate  
 
 
 ### 创建Docker网络
