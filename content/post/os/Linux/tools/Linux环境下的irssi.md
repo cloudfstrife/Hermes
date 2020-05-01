@@ -56,7 +56,7 @@ sudo apt-get install irssi irssi-scripts
 1. **登录：**
 
 ```
-/usr/local/bin/irssi -circ.freenode.net -p7000 -naisaer或者irssi--/connect irc.freenode.net port 7000。
+irssi -c irc.freenode.net -p 7000 -n YOU_NICKNAME
 ```
 
 2. **修改昵称：**
