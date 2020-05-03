@@ -212,6 +212,7 @@ PageUP/PageDn切换上/下页讯息。
 
 ```
 /join #go-nuts
-/join #debian-cn
 /join #golang.tw
+/join #debian-cn
+/join ##Orz
 ```
