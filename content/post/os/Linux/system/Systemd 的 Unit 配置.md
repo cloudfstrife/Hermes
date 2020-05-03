@@ -36,7 +36,7 @@ systemd 服务的 Unit 文件可以分三个段
 
 以下是ssh.service
 
-```
+```text
 $ cat /usr/lib/systemd/system/ssh.service 
 [Unit]
 Description=OpenBSD Secure Shell server

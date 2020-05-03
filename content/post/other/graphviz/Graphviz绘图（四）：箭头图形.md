@@ -21,7 +21,7 @@ keywords:
 
 Edge的`dir`属性指定了有向图的箭头指向，取值可以为 `forword`,`back`,`both`,`none` 。
 
-```
+```text
 digraph g{
 	a->b [dir=forword]
 	c->d [dir=back]
@@ -36,8 +36,7 @@ digraph g{
 
 Edge的`arrowhead`属性指定箭头头部的图形。当且仅当Edge的`dir`为`forward`或者`both`时才会生效。箭头形状取值参见: [箭头形状](#箭头形状)
 
-
-```
+```text
 digraph g{
 	graph [rankdir=LR]
 	a->b [dir=forword;arrowhead=box]
@@ -50,7 +49,7 @@ digraph g{
 
 Edge的`arrowtail`属性指定箭头尾部的图形。当且仅当Edge的`dir`为`back`或者`both`时才会生效。箭头形状取值参见: [箭头形状](#箭头形状)
 
-```
+```text
 digraph g{
 	graph [rankdir=LR]
 	a->b [dir=both;arrowhead=box;arrowtail=diamond]
@@ -63,7 +62,7 @@ digraph g{
 
 箭头样式的抽象语法如下：
 
-```
+```text
 arrowname 	: 	aname [ aname [ aname [ aname ] ] ]
 aname 	: 	[ modifiers ] shape
 modifiers 	: 	[ 'o' ] [ side ]
@@ -88,7 +87,7 @@ shape 	: 	box
 
 `arrowhead`和`arrowtail`属性每个可以指定四个箭头形状，多个箭头形状的顺序从指向位置开始，依次排列。`none`也会占用空间。
 
-```
+```text
 digraph g{
 	graph [rankdir=LR]
 	a->b [dir=back;arrowtail=boxdiamondnonevee;]
@@ -109,7 +108,7 @@ digraph g{
 
 ---
 
-```
+```text
 digraph g{
 	graph [rankdir=LR]
 	a->b [dir=forword;arrowhead=lboxordiamondnonevee;]

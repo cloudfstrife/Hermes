@@ -265,7 +265,7 @@ func main() {
 
 > 上面的示例中，当终端输出`Killed`时，在另一个终端执行`ps -ef | grep sub_pid`，会得到如下输出：
 
-```
+```text
 $ ps -ef | grep 3647
 USER      3647   3641  0 18:53 pts/0    00:00:00 [top] <defunct>
 USER      3649   3636  0 18:54 pts/1    00:00:00 grep 3647

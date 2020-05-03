@@ -29,7 +29,7 @@ HTTP2的优势很多，最大的特点有：多路复用，二进制压缩报文
 
 ## 修改配置
 
-```
+```nginxconf
 server {
 	# 添加 http2
 	listen 443 ssl http2;

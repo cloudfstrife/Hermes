@@ -34,7 +34,7 @@ Windows环境安装 MySQL 8
 
 > 附加部分InnoDB优化项
 
-```
+```plaintext
 [mysqld]
 basedir=D:\mysql-8.0.15
 datadir=D:\mysql-8.0.15\data
@@ -147,13 +147,13 @@ default-character-set=utf8mb4
 
 ## 初始化数据库
 
-```
+```plaintext
 mysqld --initialize --console
 ```
 
 输出内容如下:
 
-```
+```plaintext
 D:\mysql-8.0.15>mysqld --initialize --console
  100 200 300 400 500
  100 200 300 400 500
@@ -168,7 +168,7 @@ D:\mysql-8.0.15>mysqld --initialize --console
 
 以**管理员身份**打开一个命令行，执行以下命令：
 
-```
+```plaintext
 mysqld --install MySQL
 ```
 
@@ -176,7 +176,7 @@ mysqld --install MySQL
 
 在**管理员身份**的命令行中执行以下命令：
 
-```
+```plaintext
 net start MySQL
 ```
 
@@ -184,14 +184,15 @@ net start MySQL
 
 以root身份登陆
 
-```
+```plaintext
 mysql -u root -p
 ```
 
 执行命令后输入上面的临时密码
 
 修改密码
-```
+
+```plaintext
 alter user `root`@`%` identified by '123456';
 flush privileges ;
 ```
@@ -202,7 +203,7 @@ flush privileges ;
 
 以**管理员身份**打开一个命令行，执行以下命令：
 
-```
+```plaintext
 mysqld --remove MySQL
 ```
 

@@ -27,7 +27,7 @@ keywords:
 
 ## 示例
 
-```
+```toml
 # This is a TOML document.
 
 title = "TOML Example"
@@ -101,7 +101,7 @@ key = "value" # This is a comment at the end of a line
 
 裸键只能包含ASCII字母，ASCII数字，下划线和短横线(`A-Za-z0-9_-`)，可以是纯数学，解析时，这样的键被当做纯数学字符串来处理。
 
-```
+```toml
 key = "value"
 bare_key = "value"
 bare-key = "value"
@@ -112,7 +112,7 @@ bare-key = "value"
 
 引号键（Quoted keys）遵循基本字符串或字面量字符串相同的规则，可以定义更广泛的键名。但是，除非必须使用这样的定义方式才会用，一般情况下裸键就够了。
 
-```
+```toml
 "127.0.0.1" = "value"
 "character encoding" = "value"
 "ʎǝʞ" = "value"
@@ -122,7 +122,7 @@ bare-key = "value"
 
 裸键不可以为空，但是空的引号键是可以有(不建议这样用)
 
-```
+```toml
 = "no key name"  # INVALID
 "" = "blank"     # VALID but discouraged
 '' = 'blank'     # VALID but discouraged
@@ -135,14 +135,14 @@ bare-key = "value"
 > 如果在`.toml`文件中使用例如`physical.shape = "round"`这样的定义，Golang API会报如下错误：
 > 
 
-```
+```toml
 Near line 0 (last key parsed ''): bare keys cannot contain '.'
 exit status 1
 ```
  
 > 可以改为如下的定义
  
-```
+```toml
 [physical]
 color = "b"
 shape = "c"
@@ -150,7 +150,7 @@ shape = "c"
 
 点号键(Dotted keys)是一通过点相连的裸键或引号键。一般用于相似属性，比如数据库用驱动程序名，连接地址，用户名，密码可以使用相同的以点号分隔的字符串做为键名。
 
-```
+```toml
 name = "Orange"
 physical.color = "orange"
 physical.shape = "round"
@@ -159,7 +159,7 @@ site."google.com" = true
 
 上面的示例等价于`JSON`
 
-```
+```json
 {
   "name": "Orange",
   "physical": {
@@ -176,7 +176,7 @@ site."google.com" = true
 
 键名是不可重复的，同时，只要键名没有被**直接定**，就可以使用。
 
-```
+```toml
 a.b.c = 1
 a.d = 2
 
@@ -193,13 +193,13 @@ a.b.c = 2
 
 基本字符串由引号包裹。任何`Unicode`字符都可以使用，除了那些必须转义的：引号，反斜杠，以及控制字符。
 
-```
+```toml
 str = "I'm a string. \"You can quote me\". Name\tJos\u00E9\nLocation\tSF."
 ```
 
 > 常用的转义字符
 
-```
+```text
 \b         - backspace       (U+0008)
 \t         - tab             (U+0009)
 \n         - linefeed        (U+000A)
@@ -219,7 +219,7 @@ str = "I'm a string. \"You can quote me\". Name\tJos\u00E9\nLocation\tSF."
 
 多行基本字符串由三个引号包裹，允许换行，开头引号后的那个换行会被去除。其它空白和换行符会被保留。
 
-```
+```toml
 str1 = """
 Roses are red
 Violets are blue"""
@@ -227,7 +227,7 @@ Violets are blue"""
 
 `TOML`解析器可以灵活的将多选基本字符串解析成所在平台的换行字符。
 
-```
+```toml
 # On a Unix system, the above multi-line string will most likely be the same as:
 str2 = "Roses are red\nViolets are blue"
 
@@ -237,7 +237,7 @@ str3 = "Roses are red\r\nViolets are blue"
 
 如果某行内容很长，又想写成多行方便阅读，可以在行尾使用`\`。当一行的最后一个非空白字符是`\`时，`TOML`会把它以及它后面的所有空白（包括换行）移除，直到下一个非空白字符或结束引号。
 
-```
+```toml
 # The following strings are byte-for-byte equivalent:
 str1 = "The quick brown fox jumps over the lazy dog."
 
@@ -261,7 +261,7 @@ str3 = """\
 
 字面量字符串由单引号包裹。类似于基本字符串，只能表现为单行，由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号
 
-```
+```toml
 # What you see is what you get.
 winpath  = 'C:\Users\nodejs\templates'
 winpath2 = '\\ServerX\admin$\system32\'
@@ -273,7 +273,7 @@ regex    = '<\i\c*\s*>'
 
 多行字面量字符串由三个单引号来包裹，允许换行。类似于字面量字符串，无论任何转义都不可用。允许换行，开头引号后的那个换行会被去除，所有其它内容会原样对待。
 
-```
+```toml
 regex2 = '''I [dw]on't need \d{2} apples'''
 lines  = '''
 The first newline is
@@ -287,7 +287,7 @@ trimmed in raw strings.
 
 整数是纯数字。正数可以有加号前缀，负数的前缀是减号。可接受范围为**64**位(记作长整型) [−9,223,372,036,854,775,808 至 9,223,372,036,854,775,807]
 
-```
+```toml
 int1 = +99
 int2 = 42
 int3 = 0
@@ -296,7 +296,7 @@ int4 = -17
 
 可以在数字之间用下划线来增强可读性。每个下划线两侧必须至少有一个数字。
 
-```
+```toml
 int5 = 1_000
 int6 = 5_349_221
 int7 = 1_2_3_4_5     # VALID but discouraged
@@ -306,7 +306,7 @@ int7 = 1_2_3_4_5     # VALID but discouraged
 
 非负整数也可以用十六进制、八进制或二进制来表示。在这些格式中，数字前面不可以增加0。十六进制值大小写不敏感。数字间可以加下划线(但不能存在于前缀和值之间)
 
-```
+```toml
 # hexadecimal with prefix `0x`
 hex1 = 0xDEADBEEF
 hex2 = 0xdeadbeef
@@ -323,7 +323,7 @@ bin1 = 0b11010110
 
 浮点数应当实现`IEEE 754`64位双精度值。浮点数由整数部分（遵从与十进制整数值相同的规则）后跟小数部分(小数部分是小数点后跟一个或多个数字)和/或指数部分(指数部分是一个 E(大小写都可以)后跟一个整数)组成。如果小数部分和指数部分兼有，那小数部分必须在指数部分前面。
 
-```
+```toml
 # fractional
 flt1 = +1.0
 flt2 = 3.1415
@@ -340,13 +340,13 @@ flt7 = 6.626e-34
 
 与整数相似，可以使用下划线来增强可读性。
 
-```
+```toml
 flt8 = 224_617.445_991_228
 ```
 
 特殊浮点数表示
 
-```
+```toml
 # infinity 无穷大
 sf1 = inf  # positive infinity 正无穷大
 sf2 = +inf # positive infinity 正无穷大
@@ -362,7 +362,7 @@ sf6 = -nan # valid, actual encoding is implementation specific
 
 布尔值只有`true`和`false`，全部小写。
 
-```
+```toml
 bool1 = true
 bool2 = false
 ```
@@ -372,7 +372,7 @@ bool2 = false
 
 特定的时间可以使用指定了偏移量的`RFC 3339`格式的表示。
 
-```
+```toml
 odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
 odt3 = 1979-05-27T00:32:00.999999-07:00
@@ -380,7 +380,7 @@ odt3 = 1979-05-27T00:32:00.999999-07:00
 
 为了便于阅读，可以将日期和时间之间的`T`分隔符替换为空格(RFC 3339第5.6节所允许这样的格式)
 
-```
+```toml
 odt4 = 1979-05-27 07:32:00Z
 ```
 
@@ -390,7 +390,7 @@ odt4 = 1979-05-27 07:32:00Z
 
 如果省略`RFC 3339`日期时间格式中的时区偏移量，就表示该日期时间的使用不涉及时区偏移(没有时区当然无法转换成当地时间)。
 
-```
+```toml
 ldt1 = 1979-05-27T07:32:00
 ldt2 = 1979-05-27T00:32:00.999999
 ```
@@ -399,7 +399,7 @@ ldt2 = 1979-05-27T00:32:00.999999
 
 如果只包含`RFC 3339`日期时间格式的日期部分，那么表示一整天，与偏移量或时区没有任何关系。
 
-```
+```toml
 ld1 = 1979-05-27
 ```
 
@@ -407,7 +407,7 @@ ld1 = 1979-05-27
 
 如果只包含`RFC 3339`日期时间格式的时间部分，那么表示一天中的时间，与特定的一天没有任何关系，同时也没有任何偏移量或时区。
 
-```
+```toml
 lt1 = 07:32:00
 lt2 = 00:32:00.999999
 ```
@@ -416,7 +416,7 @@ lt2 = 00:32:00.999999
 
 数组是一组被**方括号**包裹的相同类型的值。元素由逗号分隔，元素之间的空白会被忽略，元素的数据类型必须一致(不同写法的字符串被认为是相同的类型，不同元素类型的数组也被认为是同样的数组类型)。
 
-```
+```toml
 arr1 = [ 1, 2, 3 ]
 arr2 = [ "red", "yellow", "green" ]
 arr3 = [ [ 1, 2 ], [3, 4, 5] ]
@@ -428,7 +428,7 @@ arr6 = [ 1, 2.0 ] # INVALID
 
 数组也可以跨多行，最后一个值后面可以有逗号(称为尾逗号)，值和结束括号前可以存在任意数量的换行和注释。
 
-```
+```toml
 arr7 = [
   1, 2, 3
 ]
@@ -445,13 +445,13 @@ arr8 = [
 
 表名由**方括号**包裹，单独一行出现，表名的规则与键名相同。
 
-```
+```toml
 [table]
 ```
 
 在表名下方至下一个表或文件结束之间的键值对，都是这个表的键值对。表不保证这些键值对的顺序。
 
-```
+```toml
 [table-1]
 key1 = "some string"
 key2 = 123
@@ -466,13 +466,13 @@ type.name = "pug"
 
 上面最后一个示例等价于`JSON`的如下结构：
 
-```
+```json
 { "dog": { "tater.man": { "type": { "name": "pug" } } } }
 ```
 
 `TOML`可以定义空表，但是不允许重复定义表名，同时，只要一个表名还没有被直接定义过，就可以对它和它下属的键名赋值。
 
-```
+```toml
 # DO NOT DO THIS
 
 [a]
@@ -500,7 +500,7 @@ c = 2
 
 行内表不允许换行(多行字符串除外)，即使是这样，也强烈不建议让一个行内表跨多行(不然干嘛叫行内表？)。
 
-```
+```toml
 name = { first = "Tom", last = "Preston-Werner" }
 point = { x = 1, y = 2 }
 animal = { type.name = "pug" }
@@ -508,7 +508,7 @@ animal = { type.name = "pug" }
 
 上面的行内表等同于下面的标准表定义
 
-```
+```toml
 [name]
 first = "Tom"
 last = "Preston-Werner"
@@ -525,7 +525,7 @@ type.name = "pug"
 
 表数组使用**双方括号**来表示，具有相同方括号名的表将会成为该数组内的成员。元素的顺序就是元素在文件中出现顺序。没有键值对的双方括号表将被视为一个空表。
 
-```
+```toml
 [[products]]
 name = "Hammer"
 sku = 738594937
@@ -540,7 +540,7 @@ color = "gray"
 
 等价的`JSON`如下：
 
-```
+```json
 {
   "products": [
     { "name": "Hammer", "sku": 738594937 },
@@ -552,7 +552,7 @@ color = "gray"
 
 表数组可以嵌套，在子表是使用相同的语法即可。
 
-```
+```toml
 [[fruit]]
   name = "apple"
 
@@ -575,7 +575,7 @@ color = "gray"
 
 等价的`JSON`如下：
 
-```
+```json
 {
   "fruit": [
     {
@@ -601,7 +601,7 @@ color = "gray"
 
 不要试图向一个静态定义的数组追加内容，那一定会报错的。即使数组为空或者类型兼容。
 
-```
+```toml
 # INVALID TOML DOC
 fruit = []
 
@@ -610,7 +610,7 @@ fruit = []
 
 可以适当使用行内表
 
-```
+```toml
 points = [ { x = 1, y = 2, z = 3 },
            { x = 7, y = 8, z = 9 },
            { x = 2, y = 4, z = 8 } ]

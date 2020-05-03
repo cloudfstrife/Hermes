@@ -17,7 +17,7 @@ mysql开启bin-log时，创建子程序(存储过程，函数，触发器)会报
 
 <!--more-->
 
-```
+```plaintext
 Error Code: 1418. This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
 ```
 
@@ -53,7 +53,7 @@ Error Code: 1418. This function has none of DETERMINISTIC, NO SQL, or READS SQL 
 
 在创建子程序时，声明子程序为`DETERMINISTIC` 或 `NO SQL` 或 `READS SQL DATA`的。
 
-```
+```sql
 DROP FUNCTION IF EXISTS UnderscoreToCamelCase;
 
 DELIMITER $$

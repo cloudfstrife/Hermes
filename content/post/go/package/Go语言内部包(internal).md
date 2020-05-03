@@ -22,7 +22,7 @@ Go语言1.4版本增加了 [Internal packages](https://golang.google.cn/doc/go1.
 
 ## 示例
 
-```
+```text
 .
 |-- checker
 |   |-- internal
@@ -39,7 +39,7 @@ Go语言1.4版本增加了 [Internal packages](https://golang.google.cn/doc/go1.
 
 如上包结构的程序，`checker/internal/cpu`和`checker/internal/ram`只能被`checker`包及其子包中的代码导入，不能被`main.go`导入。当在`main.go`中导入并调用其函数，编译期会报如下错误：
 
-```
+```text
 $ go build
 main.go:10:2: use of internal package app/testing/checker/internal/cpu not allowed
 

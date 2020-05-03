@@ -28,10 +28,10 @@ keywords:
 
 ### 编写函数
 
-```
-go mod init app/testing
-mkdir -p fibonacci
-touch fibonacci/fibonacci.go
+```text
+$ go mod init app/testing
+$ mkdir -p fibonacci
+$ touch fibonacci/fibonacci.go
 ```
 
 **fibonacci/fibonacci.go**
@@ -58,8 +58,8 @@ func Fibonacci(n int64) []int64 {
 
 ### 编写测试代码
 
-```
-touch fibonacci/fibonacci_test.go
+```text
+$ touch fibonacci/fibonacci_test.go
 ```
 
 **fibonacci/fibonacci_test.go**
@@ -134,13 +134,13 @@ go语言的测试代码应该与被测试代码放在相同的包里，测试源
 
 ## 执行单元测试
 
-```
-go test -v app/testing/fibonacci
+```text
+$ go test -v app/testing/fibonacci
 ```
 
 输出：
 
-```
+```text
 $ go test -v app/testing/fibonacci
 === RUN   TestFibonacci
 --- PASS: TestFibonacci (3.00s)
@@ -152,7 +152,7 @@ ok      app/testing/fibonacci   4.051s
 
 修改`TestFibonacci`中的`map`的预期数据，并去除`ExampleFibonacci`的`//Output:[1]`再次执行
 
-```
+```text
 $ go test -v app/testing/fibonacci
 === RUN   TestFibonacci
 --- FAIL: TestFibonacci (3.00s)
@@ -164,8 +164,8 @@ FAIL    app/testing/fibonacci   3.057s
 
 ## 基准测试
 
-```
-go test -bench . -run ^$ ./fibonacci
+```text
+$ go test -bench . -run ^$ ./fibonacci
 ```
 
 > * `-bench`指定执行哪些基准测试，`.`表示测试此包中下的所有基准测试，可以使用正则表达式来执行特定的测试
@@ -179,7 +179,7 @@ go test -bench . -run ^$ ./fibonacci
 
 输出
 
-```
+```text
 $ go test -bench . -run ^$ ./fibonacci
 goos: windows
 goarch: amd64

@@ -20,7 +20,7 @@ keywords:
 
 ## 用法
 
-```
+```text
 mktemp --help
 Usage: mktemp [OPTION]... [TEMPLATE]
 Create a temporary file or directory, safely, and print its name.
@@ -65,7 +65,7 @@ echo "Our temp file is $TMPFILE"
 
 运行
 
-```
+```text
 $ ./mktmp.sh 
 Our temp file is /tmp/tmp.D2PMaYfXWr
 $ ls -alh /tmp/tmp.D2PMaYfXWr 
@@ -82,7 +82,7 @@ $ ls -alh /tmp/tmp.D2PMaYfXWr
 
 #### 创建临时目录
 
-```
+```text
 $ mktemp -d 
 /tmp/tmp.nfispEVX5X
 $ ls -alh /tmp/tmp.nfispEVX5X/
@@ -93,7 +93,7 @@ drwxrwxrwt 192 root root  12K Dec 30 10:11 ..
 
 #### 使用文件名模板
 
-```
+```text
 $ mktemp -t myt_XXXXXX
 /tmp/myt_6ISrHt
 ```

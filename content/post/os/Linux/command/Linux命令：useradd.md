@@ -20,7 +20,7 @@ keywords:
 
 ## 格式
 
-```
+```text
 useradd [-d home] [-s shell] [-c comment] [-m [-k template]] [-f inactive] [-e expire ] [-p passwd] [-r] name
 ```
 
@@ -44,6 +44,6 @@ useradd [-d home] [-s shell] [-c comment] [-m [-k template]] [-f inactive] [-e e
 
 示例：
 
-```
+```text
 sudo useradd -d /home/test -m -g users -G sudo -s /bin/bash test
 ```

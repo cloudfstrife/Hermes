@@ -76,7 +76,7 @@ func TestEqual(t *testing.T) {
 
 运行结果 
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- FAIL: TestEqual (0.00s)
@@ -151,7 +151,7 @@ func TestEqual(t *testing.T) {
 
 执行结果
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- FAIL: TestEqual (0.00s)
@@ -200,7 +200,7 @@ func TestEqual(t *testing.T) {
 
 执行结果 
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- PASS: TestEqual (0.00s)
@@ -251,7 +251,7 @@ func TestEqual(t *testing.T) {
 
 运行结果 
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- PASS: TestEqual (0.00s)
@@ -303,7 +303,7 @@ func TestEqual(t *testing.T) {
 
 运行结果
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- FAIL: TestEqual (0.00s)
@@ -352,7 +352,7 @@ func TestEqual(t *testing.T) {
 运行结果 
 
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- PASS: TestEqual (0.00s)
@@ -407,7 +407,7 @@ func TestEqual(t *testing.T) {
 
 运行结果
 
-```
+```text
 $ go test -v -run TestEqual app/testing/fibonacci
 === RUN   TestEqual
 --- FAIL: TestEqual (0.00s)
@@ -424,7 +424,7 @@ FAIL    app/testing/fibonacci   0.089s
 
 函数签名：
 
-```
+```go
 func Diff(x, y interface{}, opts ...Option) string
 ```
 
@@ -474,7 +474,7 @@ func TestFibonacci(t *testing.T) {
 
 > 修改内容：测试用例`value 5  million`去除一个元素，for循环部分代码修改。
 
-```
+```text
 $ go test -v  app/testing/fibonacci
 === RUN   TestFibonacci
 --- FAIL: TestFibonacci (0.00s)

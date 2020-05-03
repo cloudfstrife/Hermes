@@ -126,14 +126,14 @@ import(
 
 ### 命令命令行查看数据
 
-```
+```text
 go tool pprof file_name
 go tool pprof https://ip:port/debug/pprof/heap
 ```
 
 命令会打开一个交互式命令行，可以输入指令，过滤或者显示相应内容。支持的命令如下 
 
-```
+```text
 (pprof) help
   Commands:
     callgrind        Outputs a graph in callgrind format
@@ -221,9 +221,9 @@ go tool pprof https://ip:port/debug/pprof/heap
 
 方法2:
 
-```
-go tool pprof -http=:8080 file_name 
-go tool trace file_name
+```text
+$ go tool pprof -http=:8080 file_name 
+$ go tool trace file_name
 ```
 
 > trace部分页面引用了`https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js`，所以国内需要开代理才能正常显示。
@@ -254,7 +254,7 @@ go tool trace file_name
 
 ### go version
 
-```
+```text
 go version go1.12.5 windows/amd64
 ```
 
@@ -262,7 +262,7 @@ go version go1.12.5 windows/amd64
 
 **目录结构**
 
-```
+```text
 .
 |-- fibonacci
 |   `-- fibonacci.go
@@ -275,11 +275,10 @@ go version go1.12.5 windows/amd64
 
 **go.mod**
 
-```
+```text
 module app/testing
 
 go 1.12
-
 ```
 
 **fibonacci/fibonacci.go**
@@ -316,7 +315,6 @@ func Fibonacci(n int64) []int64 {
 	}
 	return result
 }
-
 ```
 
 **main.go**
@@ -470,15 +468,14 @@ func CreateOrOpenFile(folder, filename string) (*os.File, error) {
 	}
 	return os.Open(FilePath)
 }
-
 ```
 
 ### 构建与运行
 
-```
-go build
+```text
+$ go build
 
-./testing
+$ ./testing
 ```
 
 程序会在当前目录创建profile目录，并把所有采样数据放在此目录中。采样数据可以使用`go tool`命令分析。

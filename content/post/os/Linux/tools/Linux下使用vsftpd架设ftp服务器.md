@@ -42,19 +42,19 @@ keywords:
 
 #### 安装vsftpd
 
-```
+```text
 yum install vsftpd*
 ```
 
 #### 安装确认安装PAM服务相关部件
 
-```
+```text
 yum install pam*
 ```
 
 #### 安装DB4部件包
 
-```
+```text
 yum install db4*
 ```
 
@@ -62,14 +62,14 @@ yum install db4*
 
 #### 建立vsftpd服务的宿主用户
 
-```
+```text
 useradd vsftpd -s /sbin/nologin
 ```
 > 默认的vsftpd的服务宿主用户是root，这是不符合安全性需要的。这里建立名为vsftpd的用户，用他来作为支持vsftpd的服务宿主用户。所以该用户没有许可他登陆系统的必要，设定他为不能登陆系统的用户。
 
 #### 建立Vsftpd虚拟宿主用户
 
-```
+```text
 useradd overload -s /sbin/nologin
 ```
 
@@ -82,19 +82,19 @@ useradd overload -s /sbin/nologin
 
 首先备份配置文件
 
-```
+```text
 cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.backup
 ```
 
 编辑配置文件`vsftpd.conf`
 
-```
+```text
 vim /etc/vsftpd/vsftpd.conf
 ```
 
 因为配置文件内容比较多，所以，这里就把配置帖出来，里面有添加的一些注释，可以对照修改，也可以复制，不过，因为中文注释是后面加的，不知道有没有漏掉#号的地方，如果有问题，可以把中文注释的行删除。
 
-```
+```text
 # Example config file /etc/vsftpd/vsftpd.conf
 #
 # The default compiled in settings are fairly paranoid. This sample file
@@ -259,14 +259,14 @@ user_config_dir=/etc/vsftpd/vconf
 
 ### 建立日志文件
 
-```
+```text
 touch /var/log/vsftpd.log
 chown vsftpd.vsftpd /var/log/vsftpd.log
 ```
 
 ### 建立虚拟用户配置文件存放目录
 
-```
+```text
 mkdir /etc/vsftpd/vconf/
 ```
 
@@ -274,7 +274,7 @@ mkdir /etc/vsftpd/vconf/
 
 #### 建立虚拟用户名单
 
-```
+```text
 touch /etc/vsftpd/virtusers
 ```
 
@@ -282,13 +282,13 @@ touch /etc/vsftpd/virtusers
 
 #### 编辑虚拟用户名单文件
 
-```
+```text
 vi /etc/vsftpd/virtusers
 ```
 
 在文件中添加以下内容
 
-```
+```text
 TestUser1
 Password1
 TestUser2
@@ -297,14 +297,14 @@ TestUser3
 Password3
 TestUser4
 Password4
-……
+......
 ```
 
 > 在其中加入虚拟用户的用户名和口令信息的格式很简单：“一行用户名，一行口令”。
 
 #### 生成虚拟用户数据文件
 
-```
+```text
 db_load -T -t hash -f /etc/vsftpd/virtusers /etc/vsftpd/virtusers.db
 ```
 
@@ -317,19 +317,19 @@ db_load -T -t hash -f /etc/vsftpd/virtusers /etc/vsftpd/virtusers.db
 
 #### 备份配置文件
 
-```
+```text
 cp /etc/pam.d/vsftpd /etc/pam.d/vsftpd.backup
 ```
 
 #### 编辑vsftpd的PAM验证配置文件
 
-```
+```text
 vi /etc/pam.d/vsftpd
 ```
 
 在#%PAM-1.0后面加上以下两行
 
-```
+```text
 auth	sufficient	pam_userdb.so	db=/etc/vsftpd/virtusers
 account	sufficient	pam_userdb.so	db=/etc/vsftpd/virtusers
 ```
@@ -342,13 +342,13 @@ account	sufficient	pam_userdb.so	db=/etc/vsftpd/virtusers
 
 #### 建立虚拟用户主目录
 
-```
+```text
 mkdir /opt/vsftp/
 ```
 
 #### 建立个虚拟用户的主目录
 
-```
+```text
 mkdir /opt/vsftp/TestUser1
 mkdir /opt/vsftp/TestUser2
 ……
@@ -356,7 +356,7 @@ mkdir /opt/vsftp/TestUser2
 
 #### 修改目录权限
 
-```
+```text
 chown -R overload.overload /opt/vsftp/
 ```
 
@@ -364,19 +364,19 @@ chown -R overload.overload /opt/vsftp/
 
 建立虚拟用户配置文件模板
 
-```
+```text
 touch /etc/vsftpd/vconf/vconf.tmp
 ```
 
 修改虚拟用户配置文件模板
 
-```
+```text
 vi /etc/vsftpd/vconf/vconf.tmp
 ```
 
 添加以下内容
 
-```
+```text
 #指定虚拟用户的具体主路径。
 local_root=/opt/vsftp/virtuser
 #设定不允许匿名用户访问。
@@ -405,18 +405,18 @@ local_max_rate=4194304000
 
 复制虚拟用户模版配置文件
 
-```
+```text
 cp /etc/vsftpd/vconf/vconf.tmp /etc/vsftpd/vconf/TestUser1
 ```
 
 针对具体用户进行定制，修改订制文件
 
-```
+```text
 vi /etc/vsftpd/vconf/TestUser1
 ```
 主要修改主目录
 
-```
+```text
 local_root=/opt/vsftp/TestUser1
 ```
 
@@ -424,7 +424,7 @@ local_root=/opt/vsftp/TestUser1
 
 ### 重启vsftpd服务
 
-```
+```text
 service vsftpd restart
 ```
 
@@ -432,7 +432,7 @@ service vsftpd restart
 
 在客户端cmd命令行下执行
 
-```
+```text
 ftp 192.168.1.206
 ```
 输入口令回车，然后输入密码。
@@ -443,13 +443,13 @@ ftp 192.168.1.206
 
 上传命令：
 
-```
+```text
 put 本地文件名
 ```
 
 下载命令
 
-```
+```text
 get 远程文件名
 ```
 
@@ -459,18 +459,19 @@ get 远程文件名
 
 只遇到了一个问题，就是上传和下载的时候，报了一个上传失败
 
-```
+```text
 553 Could not create file 
 ```
 
 解决办法：
-```
+
+```text
 getsebool -a|grep ftp
 ```
 
 得到以下内容
 
-```
+```text
 allow_ftpd_anon_write --> off
 allow_ftpd_full_access --> off
 allow_ftpd_use_cifs --> off
@@ -484,14 +485,14 @@ tftp_anon_write --> off
 
 因为seLinux的`allow_ftpd_full_access`和`ftp_home_dir`这两项是关闭状态。通过以下命令打开
 
-```
+```text
 setsebool -P allow_ftpd_full_access 1 
 setsebool -P ftp_home_dir 1 
 ```
 
 重启服务
 
-```
+```text
 service vsftpd restart 
 ```
 

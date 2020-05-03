@@ -30,12 +30,12 @@ Java多线程
 
 对于直接继承Thread的类来说，代码大致框架是：
 
-```	
+```java
 class 类名 extends Thread{
 
-	属性1；
-	属性2；
-	…
+	属性1;
+	属性2;
+	...
 
 
 	public void run(){
@@ -43,8 +43,8 @@ class 类名 extends Thread{
 	}
 
 	方法1;
-	方法2；
-	…
+	方法2;
+	...
 }
 ```
 
@@ -52,7 +52,7 @@ class 类名 extends Thread{
 
 ThreadTest.java
 
-```
+```java
 package org.hibiscus.thread;
 
 public class ThreadTest extends Thread {
@@ -78,7 +78,7 @@ public class ThreadTest extends Thread {
 
 main.Java
 
-```
+```java
 package org.hibiscus.main;
 
 public class Main {
@@ -105,19 +105,19 @@ public class Main {
 
 对于实现Runnable接口来说，代码大致框架是：
 
-```
+```java
 class 类名 implements Runnable{
 
-	属性1；
-	属性2；
-	…
+	属性1;
+	属性2;
+	...
 	public void run(){
 
 	}
 
 	方法1;
-	方法2；
-	…
+	方法2;
+	...
 }
 ```
 
@@ -125,7 +125,7 @@ class 类名 implements Runnable{
 
 RunnableTest.java
 
-```
+```java
 package org.hibiscus.thread;
 
 public class RunnableTest implements Runnable {
@@ -152,7 +152,7 @@ public class RunnableTest implements Runnable {
 
 Main.java
 
-```
+```java
 package org.hibiscus.main;
 
 import org.hibiscus.thread.RunnableTest;
@@ -178,7 +178,7 @@ public class Main {
 
 #### Demo：
 
-```
+```java
 class Saler implements Runnable{
  
 	private int ticket = 5;  //5张票
@@ -262,8 +262,8 @@ public class Main {
 ## Thread的常用方法
 
 * isAlive()
-	
-```
+
+```java
 public final boolean isAlive()
 ```
 
@@ -271,7 +271,7 @@ public final boolean isAlive()
 
 * isDaemon()
 
-```	
+```java
 public final boolean isDaemon()
 ```
 
@@ -279,7 +279,7 @@ public final boolean isDaemon()
 
 * isInterrupted()
 
-```
+```java
 public boolean isInterrupted()
 ```
 
@@ -289,7 +289,7 @@ public boolean isInterrupted()
 
 * join()
 
-```
+```java
 public final void join() throws InterruptedException
 public final void join(long millis) throws InterruptedException
 public final void join(long millis,int nanos) throws InterruptedException
@@ -299,7 +299,7 @@ public final void join(long millis,int nanos) throws InterruptedException
 
 * sleep()
 
-```
+```java
 public static void sleep(long millis) throws InterruptedException
 public static void sleep(long millis,int nanos) throws InterruptedException
 ```
@@ -308,7 +308,7 @@ public static void sleep(long millis,int nanos) throws InterruptedException
 
 * interrupt()
 
-```
+```java
 public void interrupt()
 ```
 
@@ -328,7 +328,7 @@ public void interrupt()
 
 * setPriority()
 
-```
+```java
 public final void setPriority(int newPriority)
 ```
 
@@ -348,7 +348,7 @@ public final void setPriority(int newPriority)
 
 * yield()
 
-```
+```java
 public static void yield()
 ```
 

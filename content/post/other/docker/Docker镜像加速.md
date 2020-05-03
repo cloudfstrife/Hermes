@@ -14,7 +14,7 @@ keywords:
 
 <!--more-->
 
-```
+```text
 echo -e "{\n\t\"registry-mirrors\": [\"https://docker.mirrors.ustc.edu.cn/\"]\n}\n" > /etc/docker/daemon.json
 sudo systemctl restart docker.service
 ```

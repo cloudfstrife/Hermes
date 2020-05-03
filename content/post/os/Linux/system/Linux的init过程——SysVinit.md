@@ -67,7 +67,7 @@ S 级别往往用于系统故障之后的排错和恢复。
 
 以下是一个模板
 
-```
+```bash
 #!/bin/sh
 #
 # description
@@ -144,18 +144,18 @@ exit 0
 
 启动服务
 
-```
+```text
 service 服务名 start 
 ```
 
 关闭服务
 
-```
+```text
 service 服务名 stop
 ```
 
 重启服务
 
-```
+```text
 service 服务名 restart 
 ```

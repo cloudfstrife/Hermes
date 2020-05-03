@@ -53,6 +53,6 @@ Javac命令参数说明
 
 Java快捷编译命令
 
-```
+```text
 javac -sourcepath src -extdirs lib -encoding utf8 -d bin java文件路径
 ```

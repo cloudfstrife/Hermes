@@ -37,7 +37,7 @@ Go语言中注释一般分为两种，分别是**单行注释**和**多行注释
 
 ### go doc 用法
 
-```
+```plaintext
 go doc [-u] [-c] [package|[package.]symbol[.methodOrField]]
 ```
 
@@ -55,19 +55,19 @@ go doc [-u] [-c] [package|[package.]symbol[.methodOrField]]
 
 输出指定 package ，指定类型，指定方法的注释
 
-```
+```plaintext
 $ go doc sync.WaitGroup.Add
 ```
 
 输出指定 package ，指定类型的所有程序实体，包括未导出的
 
-```
+```plaintext
 $ go doc -u -all sync.WaitGroup
 ```
 
 输出指定 package 的所有程序实体（非所有详细注释）
 
-```
+```plaintext
 $ go doc -u sync
 ```
 
@@ -77,13 +77,13 @@ $ go doc -u sync
 
 在 `go 1.12` 之后的版本中，`godoc`不再做为go编译器的一部分存在。依然可以通过`go get`命令安装：
 
-```
+```plaintext
 go get -u -v golang.org/x/tools/cmd/godoc
 ```
 
 国内的安装方法
 
-```
+```plaintext
 mkdir -p $GOPATH/src/golang.org/x
 cd $GOPATH/src/golang.org/x
 git clone https://github.com/golang/tools.git
@@ -94,7 +94,7 @@ ls -alh $GOPATH/bin
 
 `godoc` 的帮助信息
 
-```
+```plaintext
 $ godoc --help
 usage: godoc -http=localhost:6060
   -analysis string
@@ -135,7 +135,7 @@ usage: godoc -http=localhost:6060
 
 `godoc` 有两种运行模式，不指定 `-http` 标记，以命令行模式运行，与`go doc`差不多；当指定 `-http` 标记时，可以通过浏览器查看标准库和第三方库的文档。
 
-```
+```plaintext
 godoc -http=:6060
 ```
 
@@ -145,17 +145,16 @@ godoc -http=:6060
 
 如果执行以上命令的目录下 **没有** `go.mod` 文件，将以 **GOPATH模式** 运行。
 
-```
+```plaintext
 $ godoc -http=:6060
 using GOPATH mode
-
 ```
 
 此模式运行时，`Packages`页面的 `Third party` 显示的是 `$GOPATH/src` 下的`package`包。
 
 如果执行以上命令的目录下 **有** `go.mod` 文件，将以 **module模式** 运行。
 
-```
+```plaintext
 godoc -http=:6060
 using module mode; GOMOD=/xxx/xxxx/xxx/go.mod
 ```

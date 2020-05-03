@@ -24,7 +24,7 @@ keywords:
 
 >  bash 内置了 `time` 命令，执行 `time` 命令时，可以以绝对路径执行或者前面加 `\` 来运行
 
-```
+```text
 $ time ls
 Downloads
 
@@ -39,7 +39,7 @@ Downloads
 
 Debian
 
-```
+```text
 $ sudo apt-get install time
 ```
 
@@ -61,7 +61,7 @@ $ sudo apt-get install time
 
 使用以下格式字符串，以符合POSIX 1003.2标准：
 
-```
+```text
 real %e
 user %U
 sys %S
@@ -83,14 +83,14 @@ sys %S
 
 版本信息
 
-```
+```text
 $ /usr/bin/time --version
 GNU time 1.7
 ```
 
 一般输出
 
-```
+```text
 $ /usr/bin/time wc nohup.out 
   18283  207266 2713917 nohup.out
 0.05user 0.00system 0:01.23elapsed 4%CPU (0avgtext+0avgdata 1952maxresident)k
@@ -99,7 +99,7 @@ $ /usr/bin/time wc nohup.out
 
 标准POSIX 1003.2输出
 
-```
+```text
 $ /usr/bin/time -p wc nohup.out 
   18283  207266 2713917 nohup.out
 real 0.05
@@ -109,7 +109,7 @@ sys 0.00
 
 详细输出
 
-```
+```text
 $ /usr/bin/time -v wc nohup.out 
   18283  207266 2713917 nohup.out
 	Command being timed: "wc nohup.out"
@@ -141,7 +141,7 @@ $ /usr/bin/time -v wc nohup.out
 
 格式化输出`time` 命令的输出信息可以由 `--format` 指定，如果命令没有指定这个参数，则由使用 `TIME` 环境变量做为格式化信息，如果 `TIME` 环境变量没有指定，则使用默认格式。默认格式为
 
-```
+```text
 %Uuser %Ssystem %Eelapsed %PCPU (%Xtext+%Ddata %Mmax)k
 %Iinputs+%Ooutputs (%Fmajor+%Rminor)pagefaults %Wswaps
 ```
@@ -178,7 +178,7 @@ $ /usr/bin/time -v wc nohup.out
 
 Format 示例
 
-```
+```text
 $ \time --format="%W swap %P process" ls 
 Downloads
 0 swap 100% process

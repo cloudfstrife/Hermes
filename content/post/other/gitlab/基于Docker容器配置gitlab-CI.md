@@ -27,7 +27,7 @@ keywords:
 
 ## 创建gitlab-runner
 
-```
+```text
 docker run -d --name gitlab-runner \
 -v /var/run/docker.sock:/var/run/docker.sock \
 gitlab/gitlab-runner
@@ -37,13 +37,13 @@ gitlab/gitlab-runner
 
 本例做为通用的Runner注册，如果要注册为专用Runner，把密钥换成项目的Runner注册密钥，密钥在gitlab管理页面查看。
 
-```
+```text
 docker exec -it gitlab-runner gitlab-ci-multi-runner register
 ```
 
 > 此命令会要求输入一些必要信息
 > 
-```
+```text
 docker exec -it gitlab-runner gitlab-ci-multi-runner register
 Runtime platform                                    arch=amd64 os=linux pid=12 revision=4745a6f3 version=11.8.0
 Running in system-mode.                            
@@ -73,7 +73,7 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 
 ### 此处以最简单的go项目为例
 
-```
+```text
 .
 |-- .gitlab-ci.yml
 |-- LICENSE
@@ -100,7 +100,7 @@ deploy:
 
 **go.mod**
 
-```
+```text
 module app/testing
 
 go 1.12
@@ -124,6 +124,6 @@ func main() {
 
 ## 定期清理构建容器
 
-```shell
+```text
 docker rm -v `docker ps -a | grep Exited | grep "runner.*cache.*" | awk '{print $1}'`
 ```

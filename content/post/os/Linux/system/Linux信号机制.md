@@ -129,7 +129,7 @@ Linux内核支持33种不同的实时信号，范围从32到64。但是`glibc`PO
 在Linux操作系统中，可以使用`kill -l`查看支持信号列表。  
 Linux支持POSIX标准信号 和 POSIX实时信号。
 
-```
+```text
 $ kill -l
  1) SIGHUP          2) SIGINT           3) SIGQUIT            4) SIGILL             5) SIGTRAP
  6) SIGABRT         7) SIGBUS           8) SIGFPE             9) SIGKILL           10) SIGUSR1

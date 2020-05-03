@@ -21,7 +21,7 @@ keywords:
 ## 用法
 
 
-```
+```text
 $ base64 --help
 用法：base64 [选项]... [文件]
 使用 Base64 编码/解码文件或标准输入输出。
@@ -51,7 +51,7 @@ GNU coreutils 在线帮助：<https://www.gnu.org/software/coreutils/>
 编码标准输入
 
 
-```
+```text
 $ base64 
 你好
 5L2g5aW9Cg==
@@ -61,7 +61,7 @@ $ base64
 
 编码文件
 
-```
+```text
 $ touch testing.txt
 $ echo "你好"> testing.txt
 $ base64 testing.txt 
@@ -70,7 +70,7 @@ $ base64 testing.txt
 
 解码标准输入
 
-```
+```text
 $ base64 -d
 5L2g5aW9Cg==
 你好
@@ -78,7 +78,7 @@ $ base64 -d
 
 解码文件
 
-```
+```text
 $ base64 testing.txt  > encoded.txt
 $ cat encoded.txt 
 5L2g5aW9Cg==

@@ -49,7 +49,7 @@ func main() {
 
 输出
 
-```
+```text
 2,019 年快乐
 2.019 Frohes neues jahr
 happy 2,019
@@ -61,7 +61,7 @@ happy 2,019
 
 * 使用预设值
 
-```
+```go
 language.SimplifiedChinese
 language.German
 language.AmericanEnglish
@@ -69,7 +69,7 @@ language.AmericanEnglish
 
 * 使用语言字符串创建
 
-```
+```go
 language.Make("el")
 language.Parse("en-UK")
 ```
@@ -113,7 +113,7 @@ func main() {
 
 输出
 
-```
+```text
 2,019 年快乐
 2.019 Frohes neues jahr
 happy new Year
@@ -163,7 +163,7 @@ func main() {
 
 输出 
 
-```
+```text
 我吃了一个苹果
 我吃了两个苹果
 我吃了三个苹果
@@ -217,7 +217,7 @@ func main() {
 
 输出
 
-```
+```text
 我吃了 一 个苹果
 我吃了 两 个苹果
 我吃了 三 个苹果
@@ -258,7 +258,7 @@ func main() {
 
 输出 
 
-```
+```text
 苹果  : ￥ 100.00 / kg
 äpfel : € 100.00 / kg
 apple : USD 100.00 / kg

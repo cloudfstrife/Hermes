@@ -18,7 +18,7 @@ keywords:
 
 ## 用法
 
-```
+```text
 用法：userdel [选项] 登录名
 
 选项：
@@ -31,7 +31,7 @@ keywords:
 
 ## 示例
 
-```
+```text
 sudo userdel -rf xxx
 ```
 
@@ -39,7 +39,7 @@ sudo userdel -rf xxx
 
 以 `xxx` 为例
 
-```
+```text
 $ vim /etc/passwd                ## 删除以 xxx 开头的行：修改用户信息文件，删除lamp用户行
 $ vim /etc/shadow                ## 删除以 xxx 开头的行，删除shadow密码信息
 $ vim /etc/shadow                ## 删除以 xxx 开头的行，删除群组信息

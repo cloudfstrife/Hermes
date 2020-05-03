@@ -31,7 +31,7 @@ C语言可以使用`#define`来控制是否包含平台相关的特定代码。G
 
 示例：
 
-```
+```text
 source_windows_amd64.go
 ```
 
@@ -50,32 +50,32 @@ source_windows_amd64.go
 
 示例：
 
-```
+```go
 // +build linux,386 darwin,!cgo
 ```
 
 表示 
 
-```
+```text
 (linux AND 386) OR (darwin AND (NOT cgo))
 ```
 
 示例：
 
-```
+```go
 // +build linux darwin
 // +build 386
 ```
 
 表示 
 
-```
+```text
 (linux OR darwin) AND 386
 ```
 
 当一个文件在任何条件下都不被构建时，使用下面的构建标识 
 
-```
+```go
 // +build ignore
 ```
 
@@ -106,7 +106,7 @@ source_windows_amd64.go
 
 示例：
 
-```
+```go
 //go:binary-only-package
 
 package mypkg
@@ -127,7 +127,7 @@ package mypkg
 
 示例：
 
-```
+```text
 $ export GOOS=linux
 $ go list -f '{{.GoFiles}}' os/exec
 [exec.go exec_unix.go lp_unix.go]

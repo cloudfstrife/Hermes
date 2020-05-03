@@ -24,7 +24,7 @@ keywords:
 
 ## 环境说明
 
-```
+```text
 $ cat /etc/debian_version 
 10.2
 
@@ -51,7 +51,7 @@ libpostproc    55.  3.100 / 55.  3.100
 
 ### 下载m3u8文件
 
-```
+```text
 $ wget http://www.scwj.net/media/video/tianyingzhang2015/kaishu/youdian.m3u8
 
 $ cat youdian.m3u8 
@@ -104,7 +104,7 @@ youdian19.ts
 
 ## 替换文件中的ts地址
 
-```
+```text
 $ sed -i "s/youdian/http\:\/\/www\.scwj\.net\/media\/video\/tianyingzhang2015\/kaishu\/youdian/g" youdian.m3u8 
 $ cat youdian.m3u8 
 #EXTM3U
@@ -157,7 +157,7 @@ http://www.scwj.net/media/video/tianyingzhang2015/kaishu/youdian19.ts
 
 ## 合并与生成
 
-```
+```text
 $ ffmpeg -protocol_whitelist "file,http,https,tcp,tls" -i youdian.m3u8 -c copy ./02.y.mp4
 ```
 
@@ -173,7 +173,7 @@ $ ffmpeg -protocol_whitelist "file,http,https,tcp,tls" -i youdian.m3u8 -c copy .
 
 修改m3u8文件，增加`EXT-X-KEY`
 
-```
+```text
 #EXT-X-KEY:METHOD=AES-128,URI="http://www.example.com/20180125/key.key"
 ```
 

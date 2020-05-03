@@ -17,26 +17,26 @@ keywords:
 
 ## 生成sha256校验信息
 
-```
+```text
 $ sha256sum file.name 
 ```
 
 示例
 
-```
+```text
 $ sha256sum go1.13.1.linux-amd64.tar.gz 
 94f874037b82ea5353f4061e543681a0e79657f787437974214629af8407d124  go1.13.1.linux-amd64.tar.gz
 ```
 
 也可以将校验信息输出到文件
 
-```
+```text
 $ sha256sum go1.13.1.linux-amd64.tar.gz > SHA256SUM
 ```
 
 对目录下的所有文件生成校验信息
 
-```
+```text
 $ ls | grep -v "SHA256SUM" | xargs sha256sum >> SHA256SUM
 $ cat SHA256SUM 
 94f874037b82ea5353f4061e543681a0e79657f787437974214629af8407d124  go1.13.1.linux-amd64.tar.gz
@@ -45,7 +45,7 @@ $ cat SHA256SUM
 
 ## 验证文件完整性
 
-```
+```text
 $ sha256sum -c --ignore-missing SHA256SUM 
 go1.13.1.linux-amd64.tar.gz: 成功
 go1.13.linux-amd64.tar.gz: 成功

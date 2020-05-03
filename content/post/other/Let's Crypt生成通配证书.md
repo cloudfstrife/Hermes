@@ -26,7 +26,7 @@ Let's Crypt生成通配域名证书
 
 ## 安装certbot
 
-```
+```text
 sudo apt-get update
 sudo apt-get install certbot
 ```
@@ -34,7 +34,7 @@ sudo apt-get install certbot
 ## 生成域名证书
 
 
-```
+```text
 sudo certbot certonly  \
 -d *.bitlogs.tech \
 -d bitlogs.tech \
@@ -47,7 +47,7 @@ sudo certbot certonly  \
 
 命令执行后，进入交互模式
 
-```
+```text
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Enter email address (used for urgent renewal and security notices) (Enter 'c' to
@@ -56,7 +56,7 @@ cancel):
 
 此处输入电子邮件地址
 
-```
+```text
 -------------------------------------------------------------------------------
 Please read the Terms of Service at
 https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
@@ -68,7 +68,7 @@ https://acme-v02.api.letsencrypt.org/directory
 
 同意协议
 
-```
+```text
 -------------------------------------------------------------------------------
 Would you be willing to share your email address with the Electronic Frontier
 Foundation, a founding partner of the Let's Encrypt project and the non-profit
@@ -80,7 +80,7 @@ our work to encrypt the web, protect its users and defend digital rights.
 
 是否允许EFF向邮箱发邮件
 
-```
+```text
 -------------------------------------------------------------------------------
 NOTE: The IP of this machine will be publicly logged as having requested this
 certificate. If you're running certbot in manual mode on a machine that is not
@@ -93,7 +93,7 @@ Are you OK with your IP being logged?
 
 是否确认本机IP公开做为此证书的服务器
 
-```
+```text
 -------------------------------------------------------------------------------
 Please deploy a DNS TXT record under the name
 _acme-challenge.xxxxx.com with the following value:
@@ -112,13 +112,13 @@ Press Enter to Continue
 
 确认的命令:
 
-```
+```text
 nslookup -q=txt _acme-challenge.xxxx.com
 ```
 
 完成
 
-```
+```text
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at:
    /etc/letsencrypt/live/xxxx.com/fullchain.pem

@@ -30,13 +30,13 @@ Go语支持交叉编译，可以在一个平台上生成另一个平台的可执
 
 在Linux操作系统，编译arm架构 Linux操作系统的可执行程序
 
-```
+```text
 GOOS=linux GOARCH=arm go build -v 
 ```
 
 在Windows操作系统，编译amd64架构 freebsd操作系统可执行程序
 
-```
+```text
 set GOOS=freebsd
 
 set GOARCH=amd64
@@ -46,7 +46,7 @@ go build -v
 
 平台相关的环境变量
 
-```
+```text
 $GO386
 $GOARM
 $GOMIPS

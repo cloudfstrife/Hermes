@@ -17,7 +17,7 @@ Linux环境下使用`wget`同步ftp目录与本地目录
 
 <!--more-->
 
-```
+```text
 wget -nH -m  ftp://USER_NAME:PASSWORD@HOST/PATH*
 ```
 

@@ -18,7 +18,7 @@ keywords:
 
 ## 查找占用指定端口的进程
 
-```
+```text
 netstat -aon | findstr %PORT_NUMBER%
 ```
 
@@ -26,7 +26,7 @@ netstat -aon | findstr %PORT_NUMBER%
 
 ## 杀死进程
 
-```
+```text
 taskkill /pid %PID% -t -f 
 ```
 
@@ -34,7 +34,7 @@ taskkill /pid %PID% -t -f
 
 ## 示例
 
-```
+```text
 $ netstat -aon | findstr 8081
   TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       14412
   TCP    [::]:8081              [::]:0                 LISTENING       14412

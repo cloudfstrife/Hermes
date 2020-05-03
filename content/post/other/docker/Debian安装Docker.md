@@ -23,12 +23,13 @@ Debian安装Docker CE
 
 ### 删除旧的版本
 
-```
+```text
 sudo apt-get remove docker docker-engine docker.io
 ```
 
 ### 安装前置的软件
-```
+
+```text
 sudo apt-get update
 ####################################################################
 ##                           debian 8 +                           ##
@@ -50,14 +51,16 @@ sudo apt-get install \
 ```
 
 ### 添加Docker官方GPG Key
-```
+
+```text
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -
 ## 验证GPG Key 密钥指纹：9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
 sudo apt-key fingerprint 0EBFCD88
 ```
 
 #### 生成apt源
-```
+
+```text
 ####################################################################
 ##                         X86_64 / amd64                         ## 
 ####################################################################
@@ -74,7 +77,8 @@ echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; ec
 ```
 
 ### 安装Docker CE
-```
+
+```text
 sudo apt-get update
 sudo apt-get install docker-ce
 ```
@@ -83,13 +87,13 @@ sudo apt-get install docker-ce
 
 以把当前用户加入到 docker 用户组。可以让没有 root 权限的用户使用Docker
 
-```
+```text
 sudo usermod -aG docker $USER
 ```
 
 ## 卸载
 
-```
+```text
 sudo apt-get purge docker-ce
 sudo rm -rf /var/lib/docker
 ```

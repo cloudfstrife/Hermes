@@ -25,15 +25,15 @@ keywords:
 
 ## 包装错误
 
-```
-err := errors.New(“my error”)
-err = fmt.Errorf(“1s wrapping my error with Errorf: %w”, err)
-err = fmt.Errorf(“2nd wrapping my error with Errorf: %w”, err)
+```go
+err := errors.New("my error")
+err = fmt.Errorf("1s wrapping my error with Errorf: %w", err)
+err = fmt.Errorf("2nd wrapping my error with Errorf: %w", err)
 ```
 
 ## 错误的解包
 
-```
+```go
 err = errors.Unwrap(err)
 ```
 
@@ -41,7 +41,7 @@ err = errors.Unwrap(err)
 
 ## 错误比较
 
-```
+```go
 if errors.Is(err,os.PathError) {
 	//Do Something
 }
@@ -51,7 +51,7 @@ if errors.Is(err,os.PathError) {
 
 ## 错误断言
 
-```
+```go
 if errors.As(err,&target){
 	//Do Something
 }
@@ -103,7 +103,7 @@ func main() {
 
 执行结果：
 
-```
+```text
 $ go run main.go
 Wrap 002 : Wrap 001 : BaseError Message : Base
 Wrap 001 : BaseError Message : Base

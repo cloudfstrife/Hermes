@@ -14,13 +14,13 @@ Shell命令实现代码行数统计
 
 <!--more-->
 
-``
+```text
 find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f | xargs cat | grep -v $^ | wc -l
-``
+```
 
 ## 解释
 
-```
+```text
 find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f 
 ```
 
@@ -28,7 +28,7 @@ find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f
 
 ---
 
-```
+```text
 xargs cat
 ```
 
@@ -36,7 +36,7 @@ xargs cat
 
 ---
 
-```
+```text
 grep -v $^
 ```
 
@@ -44,7 +44,7 @@ grep -v $^
 
 ---
 
-```
+```text
 wc -l
 ```
 

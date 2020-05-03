@@ -15,7 +15,7 @@ keywords:
 
 <!--more-->
 
-```
+```text
 digraph sequence{
 	graph [rankdir="LR";splines="polyline"]
 	
@@ -76,7 +76,7 @@ digraph sequence{
 
 Build
 
-```
+```text
 dot -T svg -o Testing.svg Testing.dot
 ```
 

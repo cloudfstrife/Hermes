@@ -68,7 +68,7 @@ func main() {
 
 编译与运行
 
-```
+```text
 $ go build
 $ ./testing.exe
 time="2019-12-25T17:38:30+08:00" level=info msg=email

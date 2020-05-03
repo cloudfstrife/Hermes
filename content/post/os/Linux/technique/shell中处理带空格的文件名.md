@@ -17,7 +17,7 @@ keywords:
 
 一个示例
 
-```
+```bash
 #!/bin/bash
 
 for element in `ls $1`;do  
@@ -28,7 +28,7 @@ done
 
 执行
 
-```
+```text
 $ ls -alh ~/test/
 总用量 8.0K
 drwxr-xr-x 2 zdxf zdxf 4.0K 9月  10 15:48  .
@@ -53,7 +53,7 @@ $ ./test.sh  ~/test
 
 修正
 
-```
+```bash
 #!/bin/bash
 
 OLD_IFS=$IFS
@@ -69,7 +69,7 @@ IFS=$OLD_IFS
 
 执行
 
-```
+```text
 $ ./test.sh ~/test/
 /home/zdxf/test//A Introduction.doc
 /home/zdxf/test//Hello World.txt

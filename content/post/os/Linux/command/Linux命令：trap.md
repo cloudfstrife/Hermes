@@ -20,7 +20,7 @@ keywords:
 
 ## 用法
 
-```
+```text
 $ trap --help
 trap: trap [-lp] [[参数] 信号声明 ...]
     对信号和其他事件设陷阱。
@@ -46,7 +46,7 @@ trap: trap [-lp] [[参数] 信号声明 ...]
 
 支持的信号
 
-```
+```text
 $ trap -l
  1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP
  6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1
@@ -68,7 +68,7 @@ $ trap -l
 
 在 shell 中清除临时文件
 
-```
+```bash
 #!/bin/bash
 
 trap 'rm -f "$TMPFILE"' EXIT
@@ -86,7 +86,7 @@ TMPFILE=$(mktemp) || exit 1
 
 如果 `trap` 需要执行多条命令，可以封装一个函数
 
-```
+```bash
 function trap_func {
   command1
   command2

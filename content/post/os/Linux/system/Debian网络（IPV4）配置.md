@@ -19,13 +19,13 @@ Debian网络（IPV4）配置
 
 ## 查看网卡名称
 
-```
+```text
 ls /sys/class/net/
 ```
 
 或者
 
-```
+```text
 ip addr
 ```
 
@@ -37,7 +37,7 @@ ip addr
 
 DHCP自动获取IP地址
 
-```
+```text
 auto eth0                 # 网卡开机自动挂载，连接网络
 # allow-hotplug eth0      # 允许热插拔
 iface eth0 inet dhcp      # dhcp表示使用动态ip
@@ -45,7 +45,7 @@ iface eth0 inet dhcp      # dhcp表示使用动态ip
 
 静态IP地址
 
-```
+```text
 auto eth0                              # 网卡开机自动挂载，连接网络
 # allow-hotplug eth0                   # 允许热插拔
 iface eth0 inet static                 # static表示使用静态IP
@@ -63,7 +63,7 @@ dns-nameservers xxx.xxx.xxx.xxx        # 设置DNS
 
 修改文件： `/etc/resolv.conf`
 
-```
+```text
 nameserver x.x.x.x                     # 首选DNS
 nameserver x.x.x.x                     # 备选DNS
 ```
@@ -80,7 +80,7 @@ nameserver x.x.x.x                     # 备选DNS
 
 修改完网络地址配置，需要重启 `networking` 服务以使配置生效
 
-```
+```text
 sudo service networking restart
 ```
 
@@ -88,13 +88,13 @@ sudo service networking restart
 
 ### 配置网卡地址
 
-```
+```text
 sudo ifconfig eth0 xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx up
 ```
 
 ### 配置网关
 
-```
+```text
 sudo route del default	                              # 删除旧的默认网关
 sudo route add default gw xxx.xxx.xxx.xxx             # 建立新的默认网关
 sudo route											  # 查看路由表

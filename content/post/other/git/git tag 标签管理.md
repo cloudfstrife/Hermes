@@ -18,13 +18,13 @@ keywords:
 
 ## 列出标签
 
-```
+```text
 git tag 
 ```
 
 命令会按照字母顺序列出当前仓库的所有标签。可以使用`-l`结合表达式搜索特定的标签。
 
-```
+```text
 git tab -l v0.0*
 ```
 
@@ -38,7 +38,7 @@ git提供两种主要的标签
 
 创建轻量级标签
 
-```
+```text
 git tag v0.0.1
 ```
 
@@ -48,7 +48,7 @@ git tag v0.0.1
 
 创建带注释的标签
 
-```
+```text
 git tag -a v0.0.1 -m "Release v0.0.1"
 ```
 
@@ -58,7 +58,7 @@ git tag -a v0.0.1 -m "Release v0.0.1"
 
 删除标签可以使用`-d`选项
 
-```
+```text
 git tag -d v0.0.1
 ```
 
@@ -66,13 +66,13 @@ git tag -d v0.0.1
 
 将本地**所有**标签同步到远程仓库
 
-```
+```text
 git push origin --tags
 ```
 
 提交指定标签
 
-```
+```text
 git push origin v0.0.1
 ```
 
@@ -80,12 +80,12 @@ git push origin v0.0.1
 
 git版本大于`v1.7.0`
 
-```
+```text
 git push origin --delete v0.0.1
 ```
 
 git版本小于`v1.7.0`
 
-```
+```text
 git push origin :refs/tags/v0.0.1
 ```

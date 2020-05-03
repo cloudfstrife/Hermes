@@ -20,13 +20,13 @@ J2SE 5.0里引入了“静态导入”机制，通过“静态导入”可以将
 
 精确的导入一个静态成员的方法，是在源文件的开头部分（任何类或接口的定义之前），加上类似这样的声明：
 
-```
+```java
 import static 包名.类或接口名.静态成员名;
 ```
 
 示例：
 
-```
+```java
 package org.hibiscus.demo;
 
 public class Demo {
@@ -41,7 +41,7 @@ public class Demo {
 
 代码2
 
-```
+```java
 package org.hibiscus.main;
 
 import static org.hibiscus.demo.Demo.*;
@@ -66,7 +66,7 @@ public class Main {
 
 静态导入可以使用*来导入
 
-```
+```java
 import static 包名.类或接口名.*;
 ```
 
@@ -84,7 +84,7 @@ static import不能突破Java语言中原有的访问控制机制的限制，不
 
 此时，如果两个属性或者方法都是精准的静态导入或者都使用按需导入时，会造成编译错误，例如下面的错误：
 
-```	
+```java
 The method fun(int, int) is ambiguous for the type Main
 ```
 

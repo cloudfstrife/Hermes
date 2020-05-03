@@ -15,7 +15,7 @@ keywords:
 
 ## Postgres SQL
 
-```
+```text
 docker run  -d  --name postgres \
 -e POSTGRES_PASSWORD=#PG密码# \
 -v /data/docker/postgres/data:/var/lib/postgresql/data \
@@ -26,7 +26,7 @@ postgres
 
 ## MySQL
 
-```
+```text
 sudo docker stop mysql
 sudo docker rm mysql
 
@@ -57,7 +57,7 @@ mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
 ## Redis
 
-```
+```text
 sudo docker run  -d --name redis \
 -v /data/docker/redis/data:/data \
 -v /etc/localtime:/etc/localtime \
@@ -65,19 +65,17 @@ sudo docker run  -d --name redis \
 redis redis-server
 ```
 
-
-
 ## Memcached
 
-```
+```text
 sudo docker run  -d --name memcached \
 -v /etc/localtime:/etc/localtime \
 memcached memcached -m 64
 ```
 
-##
+## RabbitMQ
 
-```
+```text
 docker run -d --name rabbitmq \
 --hostname rabbitmq \
 -p "4369:4369" \

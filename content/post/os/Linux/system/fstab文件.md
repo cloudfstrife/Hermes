@@ -23,7 +23,7 @@ keywords:
 
 下面是一个简单的示例：
 
-```
+```text
 $ cat /etc/fstab 
 # /etc/fstab: static file system information.
 #
@@ -46,7 +46,7 @@ UUID=3D70-82F8  /boot/efi       vfat    umask=0077      0       1
 
 `/etc/fstab`文件第一行包含以下几个字段，每个字段使用空格或者tab分隔
 
-```
+```text
 <file system> <mount point>   <type>  <options>       <dump>  <pass>
 ```
 
@@ -65,7 +65,7 @@ UUID=3D70-82F8  /boot/efi       vfat    umask=0077      0       1
 
 使用命令`sudo fdisk -l `来获取设备的内核名称
 
-```
+```text
 $ sudo fdisk -l /dev/sda
 Disk /dev/sda: 40 GiB, 42949672960 bytes, 83886080 sectors
 Units: sectors of 1 * 512 = 512 bytes
@@ -87,7 +87,7 @@ Device       Start      End  Sectors  Size Type
 
 要显示所有设备的标签，可以使用`lsblk -f`命令。
 
-```
+```text
 $ sudo lsblk -f
 NAME          FSTYPE      LABEL UUID                                   MOUNTPOINT
 sda                                                                    
@@ -103,7 +103,7 @@ sda
 
 在`/etc/fstab`中使用`LABEL=`作为设备名的开头
 
-```
+```text
 /etc/fstab
 
 # <file system>        <dir>         <type>    <options>             <dump> <pass>
@@ -120,7 +120,7 @@ LABEL=Arch_Swap        none          swap      defaults              0      0
 
 `lsblk -f`命令可以查看设备的UUID值。`/etc/fstab`中使用`UUID=`前缀
 
-```
+```text
 /etc/fstab
 
 # <file system>                           <dir>         <type>    <options>             <dump> <pass>

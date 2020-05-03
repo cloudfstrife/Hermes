@@ -47,7 +47,7 @@ func TestFibonacci(t *testing.T) {
 
 以上的测试可以使用以下命令执行：
 
-```
+```text
 $ go test -v  app/testing/fibonacci
 === RUN   TestFibonacci
 === RUN   TestFibonacci/negative
@@ -96,7 +96,7 @@ func TestMain(m *testing.M) {
 
 **示例**
 
-```
+```text
 mkdir echo
 touch echo/echo.go
 touch echo/echo_test.go
@@ -153,7 +153,7 @@ func TestEchoD(t *testing.T) {
 
 运行测试结果如下：
 
-```
+```text
 $ go test -v app/testing/echo
 === RUN   TestEchoA
 A
@@ -218,7 +218,7 @@ func TestEchoD(t *testing.T) {
 
 再次运行，输出如下
 
-```
+```text
 $ go test -v app/testing/echo
 === RUN   TestEchoA
 === PAUSE TestEchoA
@@ -265,7 +265,7 @@ func BenchmarkFibonacci(b *testing.B) {
 
 运行效果
 
-```
+```text
 $ go test -bench . -run ^$ -cpu 1,2,3,4,5,6,7,8  ./fibonacci
 goos: windows
 goarch: amd64
@@ -289,14 +289,14 @@ ok      app/testing/fibonacci   16.639s
 
 `go test` 命令的`-cover`标记指定输出测试用例的测试覆盖率
 
-```
+```text
 $ go test -cover app/testing/fibonacci
 ok      app/testing/fibonacci   0.054s  coverage: 100.0% of statements
 ```
 
 另一种更友好的方式是以profile的形式保存测试覆盖率，并使用`go tool`展示详细的测试用例覆盖信息。
 
-```
+```text
 $ go test -coverprofile fibonacci_cover.out app/testing/fibonacci
 ok      app/testing/fibonacci   0.051s  coverage: 100.0% of statements
 
@@ -314,7 +314,7 @@ $ go tool cover -html fibonacci_cover.out
 
 示例
 
-```
+```text
 $ mkdir profile
 $ go test -bench . -run ^$ -blockprofile block.out -cpuprofile cpu.out -memprofile mem.out -mutexprofile mutex.out  -trace trace.out -outputdir ../profile ./fibonacci
 $ ls profile/
@@ -339,6 +339,6 @@ block.out  cover.out  cpu.out  mem.out  mutex.out  trace.out
 
 ### 命令
 
-```
+```text
 go help testflag
 ```

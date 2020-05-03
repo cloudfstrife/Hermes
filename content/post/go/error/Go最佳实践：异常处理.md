@@ -30,7 +30,7 @@ func (e *ErrZeroDivision) Error() string {
 
 或者
 
-```
+```go
 var ErrSomething = errors.New("Item not found")
 ```
 

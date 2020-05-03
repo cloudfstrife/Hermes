@@ -145,7 +145,7 @@ JSONFormat
 
 TextFormat
 
-```
+```text
 time="2019-03-18T17:11:41+08:00" level=fatal msg="Failed to send event" event=onchange key=001 topic=logrus
 ```
 ### 默认字段
@@ -168,8 +168,8 @@ log.SetReportCaller(true)
 
 > **注意** : 这会添加不小的开销，取决与go版本，1.6与1.7的版本测试中，性能损失20%-40%，可以通过基准测试来验证：
 
-```
-go test -bench=.*CallerTracing
+```text
+$ go test -bench=.*CallerTracing
 ```
 
 ## Hook

@@ -28,14 +28,14 @@ keywords:
 
 ### Debian
 
-```
+```text
 $ sudo apt-get update 
 $ sudo apt-get install graphviz graphviz-doc
 ```
 
 ## 示例
 
-```
+```text
 $ mkdir -p graphviz/Testing
 $ cd graphviz/Testing/
 $ touch Testing.dot
@@ -43,7 +43,7 @@ $ touch Testing.dot
 
 使用文本编辑器编辑`Testing.dot`，添加如下内容
 
-```
+```text
 digraph G {
     main -> parse -> execute;
     main -> init;
@@ -60,7 +60,7 @@ digraph G {
 
 生成图片
 
-```
+```text
 $ dot -T svg Testing.dot -o Testing.svg
 ```
 

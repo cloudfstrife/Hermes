@@ -21,7 +21,7 @@ keywords:
 
 DEMO:
 
-```
+```java
 public enum Demo {
 	MON, TUE, WED, THU, FRI, SAT, SUN;
 }
@@ -29,7 +29,7 @@ public enum Demo {
 
 这段代码实际上调用了7次 Enum 的构造函数七次
 
-```	
+```java
 new Enum<EnumTest>("MON",0);
 new Enum<EnumTest>("TUE",1);
 new Enum<EnumTest>("WED",2);
@@ -43,7 +43,7 @@ new Enum<EnumTest>("SUN",6);
 
 * compareTo(E o)
 
-```
+```java
 public final int compareTo(E o)
 ```
 
@@ -51,7 +51,7 @@ public final int compareTo(E o)
 
 * Class<E> getDeclaringClass()
 
-```
+```java
 public final Class<E> getDeclaringClass()
 ```
 
@@ -59,7 +59,7 @@ public final Class<E> getDeclaringClass()
 
 * name()
 
-```
+```java
 public final String name()
 ```
 
@@ -67,7 +67,7 @@ public final String name()
 
 * ordinal()
 
-```
+```java
 public final int ordinal()
 ```
 
@@ -75,7 +75,7 @@ public final int ordinal()
 
 * toString()
 
-```
+```java
 public String toString()
 ```
 
@@ -84,7 +84,7 @@ public String toString()
 
 * static valueOf()
 
-```
+```java
 static <T extends Enum<T>> T valueOf(Class<T> enumType, String name)
 ```
 
@@ -92,7 +92,7 @@ static <T extends Enum<T>> T valueOf(Class<T> enumType, String name)
 
 * static values()
 	
-```
+```java
 public static <T extends Enum<T>> [] values()
 ```
 
@@ -102,7 +102,7 @@ public static <T extends Enum<T>> [] values()
 
 给 enum 对象加一下 value 的属性和 getValue() 的方法：
 
-```
+```java
 public enum Demo {
 
 	 MON, TUE, WED, THU, FRI, SAT, SUN;
@@ -121,7 +121,7 @@ public enum Demo {
 
 ## 实现带有构造器的枚举
 
-```
+```java
 public enum Demo {
 
 	MON(0), TUE(1), WED(2), THU(3), FRI(4), SAT(5), SUN(6);
@@ -148,7 +148,7 @@ public enum Demo {
 
 EnumSet Demo:
 
-```
+```java
 public static void main(String[] args) {
 	EnumSet<Demo> demoSet = EnumSet.allOf(Demo.class);
 	for (Demo demo : demoSet) {
@@ -159,7 +159,7 @@ public static void main(String[] args) {
 
 EnumMap Demo：
 
-```
+```java
 public static void main(String[] args) {
 	
 	EnumMap<Demo, String> enumMap = new EnumMap<Demo, String>(Demo.class);

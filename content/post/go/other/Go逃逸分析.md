@@ -27,8 +27,8 @@ Go是通过在编译器里做逃逸分析（escape analysis）来决定一个对
 
 ## golang 如何进行逃逸分析
 
-```
-go run -gcflags '-m -l' xxxx.go
+```text
+$ go run -gcflags '-m -l' xxxx.go
 ```
 
 这里的`xxxx.go`必须是包含`main`函数的。`-m` 输出逃逸分析的优化策略，`-l`禁用函数内联，减少干扰。
@@ -97,7 +97,7 @@ func main() {
 ```
 
 
-```
+```text
 $ go  run -gcflags '-m -l' cmd/main/main.go
 # command-line-arguments
 cmd\main\main.go:34:4: wg escapes to heap

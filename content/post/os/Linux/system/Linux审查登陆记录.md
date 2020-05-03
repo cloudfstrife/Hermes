@@ -23,7 +23,7 @@ keywords:
 
 `w` 命令可用于显示当前登录系统的用户信息。
 
-```
+```text
  15:06:41 up  1:18,  1 user,  load average: 0.08, 0.03, 0.01
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
 xxxxx    pts/0    xxx.xxx.xxx.xxx  13:49    0.00s  2.05s  0.00s w
@@ -31,7 +31,7 @@ xxxxx    pts/0    xxx.xxx.xxx.xxx  13:49    0.00s  2.05s  0.00s w
 
 `w`命令显示的对应信息如下：
 
-```
+```text
 当前时间 系统启动到现在的时长 登录用户的数目 系统在最近1秒/5秒/15秒的平均负载  
 USER: 登录帐号  
 TTY : 终端名称  
@@ -47,14 +47,14 @@ WHAT: 当前正在运行进程的命令行
 
 `who` 命令用于显示当前当登录的用户的信息
 
-```
+```text
 $ who
 xxxxx    pts/0        2019-11-05 13:49 (xxx.xxx.xxx.xxx)
 ```
 
 `who`命令显示的对应信息如下：
 
-```
+```text
 登录帐号 终端名称 登录时间 用户登录IP地址
 ```
 
@@ -62,7 +62,7 @@ xxxxx    pts/0        2019-11-05 13:49 (xxx.xxx.xxx.xxx)
 
 `users` 命令用于显示当前当登录的用户的用户名。如果一个用户有多个登录会话，则用户名将显示多次。
 
-```
+```text
 $ users
 xxxxx yyyyy
 ```
@@ -71,7 +71,7 @@ xxxxx yyyyy
 
 `last` 用于显示用户最近登录信息。单独执行`last`命令，它会读取`/var/log/wtmp`的文件，并把该给文件的内容记录的登入系统的用户名单全部显示出来。
 
-```
+```text
 $ last -n 10
 xxxxx    pts/0        xxx.xxx.xxx.xxx  Tue Nov  5 13:49   still logged in
 reboot   system boot  4.19.0-6-amd64   Tue Nov  5 13:48   still running
@@ -89,7 +89,7 @@ wtmp begins Fri Jul 26 10:06:12 2019
 
 `last`命令显示的对应信息如下：
 
-```
+```text
 用户名称 终端名称 用户登录IP地址 日志活动发生时间 (括号中的数字表示连接持续了多少小时和分钟)
 ```
 
@@ -97,7 +97,7 @@ wtmp begins Fri Jul 26 10:06:12 2019
 
 `lastb` 命令用于显示用户错误的登录列表，此指令可以发现系统的登录异常。单独执行`lastb`命令，它会读取位于`/var/log/btmp`的文件，并把该文件内容记录的登入失败的用户名单，全部显示出来。
 
-```
+```text
 $ sudo lastb
 
 btmp begins Mon Nov  4 10:21:35 2019
@@ -107,7 +107,7 @@ btmp begins Mon Nov  4 10:21:35 2019
 
 `lastlog` 命令用于显示系统中所有用户最近一次登录信息。
 
-```
+```text
 用户名           端口     来自             最后登陆时间
 root                                       **从未登录过**
 daemon                                     **从未登录过**

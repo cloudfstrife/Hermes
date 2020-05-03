@@ -47,14 +47,14 @@ keywords:
 
 **Demo:**
 
-```
+```java
 @Target(ElementType.TYPE)
 public @interface DemoAnnotation {
 	public String tableName() default "className";		
 }
 ```
 
-```
+```java
 @Target(ElementType.FIELD)
 public @interface NoDBColumn {
 
@@ -75,7 +75,7 @@ public @interface NoDBColumn {
 
 **Demo**
 
-```
+```java
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Column {
@@ -94,7 +94,7 @@ public @interface Column {
 
 **Demo**
 
-```
+```java
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -118,7 +118,7 @@ public @interface Column {
 
 **Demo**
 
-```
+```java
 @Inherited
 public @interface Greeting {
 	public enum FontColor{ BULE,RED,GREEN};
@@ -133,7 +133,7 @@ public @interface Greeting {
 
 > 定义注解格式：
 
-```
+```java
 public @interface 注解名 {
 	定义体
 }

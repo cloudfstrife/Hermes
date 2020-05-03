@@ -39,7 +39,7 @@ func main() {
 
 运行
 
-```
+```plaintext
 $ go run -race main.go
 a is  3
 ==================

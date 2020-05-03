@@ -46,7 +46,7 @@ Linux环境使用无线网卡配置AP
 
 因为Raspberry PI 3 model B板载两块网卡，一块有线，一块无线，所以，将树莓派做为一个无线AP是可行的，如果是主机，可以在安装好网卡驱动之后，使用命令`iw`验证网卡是否支持虚拟AP功能：
 
-```
+```text
 [root@localhost ~]$ sudo iw list
 	......
 	......
@@ -63,7 +63,7 @@ Supported interface modes:
 
 ### 安装做需要的组件
 
-```
+```text
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install hostapd hostap-utils dnsmasq
@@ -73,7 +73,7 @@ sudo apt-get install hostapd hostap-utils dnsmasq
 
 修改 `/etc/hostapd/hostapd.conf`，内容如下：
 	
-```
+```text
 interface=wlan0
 driver=nl80211
 ssid=RaspberryAP
@@ -90,7 +90,7 @@ rsn_pairwise=CCMP
 
 修改 `/etc/init.d/hostapd` 将文件中 `DAEMON_CONF` 的值改成：  
 
-```
+```text
 DAEMON_CONF=/etc/hostapd/hostapd.conf
 ```
 
@@ -98,7 +98,7 @@ DAEMON_CONF=/etc/hostapd/hostapd.conf
 
 修改 `/etc/dnsmasq.conf`，内容如下：
 
-```	
+```text
 interface=wlan0  
 listen-address=192.168.100.1  
 #no-dhcp-interface=  
@@ -111,7 +111,7 @@ server=DNS服务器地址
 
 ### 配置/etc/network/interfaces开启主机的路由转发
 
-```	
+```text
 sudo echo 1 >/proc/sys/net/ipv4/ip_forward
 ```
 
@@ -119,24 +119,24 @@ sudo echo 1 >/proc/sys/net/ipv4/ip_forward
 > 
 > 可以使其重启后有效的方法是修改/etc/sysct.conf文件，在其中增加如下一行：
 
-```
+```text
 net.ipv4.ip_forward=1
 ```
 ### 配置IPv4转发,使其可以连接网络
 
-```
+```text
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 ```
 
 ### 配置无线网卡地址
 
-```
+```text
 sudo ifconfig wlan0 192.168.100.1 netmask 255.255.255.0  up  
 ```
 
 ### 启动服务
 
-```
+```text
 sudo service hostapd start
 sudo service dnsmasq start
 ```

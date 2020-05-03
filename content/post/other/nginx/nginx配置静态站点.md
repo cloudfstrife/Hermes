@@ -14,7 +14,7 @@ nginx配置静态站点与SSL
 
 <!--more-->
 
-```
+```nginxconf
 server {
 	listen 443 ssl http2;
 	server_name www.bitlogs.tech bitlogs.tech;

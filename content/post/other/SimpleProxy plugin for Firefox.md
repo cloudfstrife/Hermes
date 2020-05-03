@@ -16,7 +16,7 @@ keywords:
 
 SimpleProxy插件地址
 
-```
+```text
 https://addons.mozilla.org/zh-CN/firefox/addon/simpleproxy/
 ```
 

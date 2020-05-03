@@ -34,7 +34,7 @@ Sonar是一个用于代码质量管理的开源平台，用于管理源代码的
 
 ### 拉取Docker镜像
 
-```
+```text
 docker pull postgres:11.1
 docker pull sonarqube:7.4-community
 ```
@@ -55,13 +55,13 @@ docker pull sonarqube:7.4-community
 
 ### 创建Docker网络
 
-```
+```text
 sudo docker network create -d bridge docker-network
 ```
 
 ### 创建数据库容器
 
-```
+```text
 docker run -d --name postgres \
 --network docker-network \
 -e POSTGRES_PASSWORD=postgres_2016 \
@@ -75,7 +75,7 @@ postgres:11.1
 
 ### 创建SonarQube容器
 
-```
+```text
 mkdir -p /data/docker/sonarqube/data
 mkdir -p /data/docker/sonarqube/logs
 mkdir -p /data/docker/sonarqube/extensions
@@ -121,7 +121,7 @@ sonarqube:7.4-community
 
 在项目目录下添加`sonar-project.properties`文件，内容如下 ：
 
-```
+```properties
 # 必须在SonarQube实例中唯一
 sonar.projectKey=my:project
 # 这是SonarQube UI中显示的名称和版本。

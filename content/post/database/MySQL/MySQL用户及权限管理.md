@@ -20,13 +20,13 @@ MySQL用户及权限管理
 
 ### 新增用户
 
-```
+```plaintext
 create user 用户名 IDENTIFIED by '密码';
 ```
 
 ### 修改用户名
 
-```
+```plaintext
 rename user feng to newuser;
 ```
 
@@ -34,7 +34,7 @@ rename user feng to newuser;
 
 * 方法1 
 
-```
+```plaintext
 alter user 用户名@'主机host' identified by '密码';
 ```
 > 示例：
@@ -44,13 +44,13 @@ alter user 用户名@'主机host' identified by '密码';
 
 * 方法2
 
-```
+```plaintext
 set password for 用户名 = '密码';
 ```
 
 ### 删除用户
 
-```
+```plaintext
 drop user 用户名;
 ```
 
@@ -97,12 +97,12 @@ drop user 用户名;
 
 ### 查看用户已有权限 
 
-```
+```plaintext
 show grants for 用户名;
 ```
 ### 分配权限
 
-```
+```plaintext
 GRANT 权限列表 ON 权限作用域 TO 用户名@<host> [IDENTIFIED BY '密码'] [WITH GRANT OPTION]; 
 ```
 
@@ -135,7 +135,7 @@ GRANT 权限列表 ON 权限作用域 TO 用户名@<host> [IDENTIFIED BY '密码
 
 **demo**
 
-```
+```plaintext
 grant all privileges  on xxxx.* to username@'%';
 grant super on *.* to xxxx@'%';
 flush privileges;
@@ -145,13 +145,15 @@ flush privileges;
 
 ### 回收权限
 
-	REVOKE  权限列表 ON 权限作用域 FROM 用户名@<host>[,用户名@<host>];
+```plaintext
+REVOKE  权限列表 ON 权限作用域 FROM 用户名@<host>[,用户名@<host>];
+```
 
 各属性取值同[权限分配]
 
 ### 刷新权限
 
-```
+```plaintext
 flush privileges;
 ```
 

@@ -79,7 +79,7 @@ func main() {
 执行结果：
 
 
-```
+```text
 time="2019-12-18T09:15:54+08:00" level=info msg=Go
 time="2019-12-18T09:15:54+08:00" level=info msg="Bcrypt(\"Go\") = $2a$10$VCph3H9uCUt3huwd4q4Q9erga7RS88AHWJbsTBOGWgpFKXE0m1GOW"
 time="2019-12-18T09:15:54+08:00" level=info msg="Cost(\"$2a$10$VCph3H9uCUt3huwd4q4Q9erga7RS88AHWJbsTBOGWgpFKXE0m1GOW\")=10"

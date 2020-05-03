@@ -26,19 +26,19 @@ keywords:
 
 ## 查看用户的认证插件
 
-```
+```sql
 SELECT user,host,plugin from mysql.user ;
 ```
 
 ## 创建用户时指定认证插件
 
-```
+```sql
 CREATE USER USER_NAME@'%' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
 ```
 
 ## 修改用户认证插件
 
-```
+```sql
 ALTER USER 'USER_NAME'@'%' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
 FLUSH PRIVILEGES;
 ```

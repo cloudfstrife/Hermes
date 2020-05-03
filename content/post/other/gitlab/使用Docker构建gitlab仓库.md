@@ -17,13 +17,13 @@ keywords:
 
 ## 拉取镜像
 
-```
+```text
 sudo docker pull gitlab/gitlab-ce:11.6.3-ce.0
 ```
 
 ## 创建Docker容器
 
-```
+```text
 sudo docker run -d --name gitlab \
 --hostname gitlab \
 -e GITLAB_OMNIBUS_CONFIG="external_url 'http://xxx.xxxx.xxx.xxx'; gitlab_rails['lfs_enabled'] = true; gitlab_rails['gitlab_shell_ssh_port'] = 1022; " \
