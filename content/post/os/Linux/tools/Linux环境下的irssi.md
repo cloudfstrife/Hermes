@@ -27,22 +27,16 @@ sudo apt-get install irssi irssi-scripts
 
 1. 使用 `/server remove xxxx.xxxx.xxx` 命令移除所有服务器
 
+1. 添加network
+
+```text
+/network add -nick xxxxxxxx -user xxxxxxxx -realname xxxxxxxx -sasl_username xxxxxxxx -sasl_password xxxxxxxx -sasl_mechanism PLAIN freenode
+```
+
 1. 添加服务器
 
 ```text
 /server add -auto -ssl -ssl_verify -network freenode chat.freenode.net 7000
-```
-
-1. 添加认证
-
-```text
-/network add -nick <你在自己的名子> freenode
-```
-
-1. 添加自动执行命令
-
-```text
-/network add -autosendcmd "/^msg nickserv identify <你自己的密码>;wait 2000" freenode
 ```
 
 1. 添加自动连接频道
@@ -206,6 +200,12 @@ PageUP/PageDn切换上/下页讯息。
 /ignore * QUITS
 /ignore * JOINS
 /ignore * PARTS
+```
+
+## 设置编码
+
+```text
+/recode add * utf-8
 ```
 
 ## freenode 中文频道 
