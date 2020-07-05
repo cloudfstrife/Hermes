@@ -26,7 +26,7 @@ sudo visudo -f /etc/sudoers.d/keep_proxy
 命令会打开 nano 编辑器，在编辑器中输入
 
 ```
-Defaults env_keep += "all_proxy ftp_proxy http_proxy https_proxy no_proxy"
+Defaults env_keep += "ftp_proxy http_proxy https_proxy no_proxy"
 ```
 
 > `env_keep` 的值是要保留的环境变量名的列表
