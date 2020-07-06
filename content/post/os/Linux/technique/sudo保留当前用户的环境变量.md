@@ -17,7 +17,7 @@ keywords:
 
 ## 添加配置
 
-```
+```text
 sudo visudo -f /etc/sudoers.d/keep_proxy
 ```
 
@@ -25,7 +25,7 @@ sudo visudo -f /etc/sudoers.d/keep_proxy
 
 命令会打开 nano 编辑器，在编辑器中输入
 
-```
+```text
 Defaults env_keep += "ftp_proxy http_proxy https_proxy no_proxy"
 ```
 
