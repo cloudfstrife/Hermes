@@ -1,5 +1,5 @@
 ---
-title: "禁用交换（swap）分区的正确方式"
+title: "Systemd引导的Linux禁用交换（swap）分区的正确方式"
 date: 2020-07-12T18:10:02+08:00
 categories:
 - Linux
@@ -61,6 +61,8 @@ $ cat -n /etc/fstab
 
 ```
 > 本例第17行为注释掉的 swap 分区
+
+执行以上操作之后，重启系统发现 swap 分区依然被开启了
 
 ## systemd Init 系统禁用交换分区的方式
 
