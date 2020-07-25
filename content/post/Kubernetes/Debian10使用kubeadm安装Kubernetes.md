@@ -11,9 +11,9 @@ keywords:
 - kubeadm
 ---
 
-记录 Debian 10 环境下安装 Kubernetes 的过程，整体过程： 前置准备 -> 安装运行时容器平台 ->  安装 kubeadm -> 拉取镜像 -> 初始化集群 -> 安装网络插件
+记录 Debian 10 环境下安装 `Kubernetes` 的过程，整体过程： 前置准备 -> 安装运行时容器平台 ->  安装 `kubeadm` -> 拉取镜像 -> 初始化集群 -> 安装网络插件
 
-> 因为**GFW**的存在，安装 kubeadm 需要FQ，**GFW,FUCK YOU!**
+> 因为 **GFW** 的存在，安装 `kubeadm` 需要FQ，**GFW,FUCK YOU!**
 
 <!--more-->
 
@@ -44,7 +44,7 @@ Kubernetes 要求集群中的每台设备具备以下条件：
 
 以下操作在每台主机上执行
 
-## 检查网卡MAC 和 product_uuid 的唯一性
+## 检查网卡 MAC 和 product_uuid 的唯一性
 
 网卡MAC
 
