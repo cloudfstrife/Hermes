@@ -90,7 +90,7 @@ EOF
 
 在集群的每台机器上执行
 
-```
+```text
 sudo apt-get install \
    apt-transport-https \
    ca-certificates \
@@ -126,12 +126,12 @@ EOF
 
 > 执行这些命令之前，先配置 http 和 https 代理，并配置 sudo 保留当前用户配置的代理环境变量，参见： [sudo保留当前用户的环境变量](/2020/07/sudo保留当前用户的环境变量/)
 
-```
+```text
 export http_proxy=http://${PROXY_IP_ADDRESS}:${PROXY_PORT}
 export https_proxy=$http_proxy
 ```
 
-```
+```text
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -151,7 +151,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 在任意一台主机执行
 
-```
+```text
 kubeadm config images list
 ```
 
@@ -162,7 +162,7 @@ kubeadm config images list
 
 在所有节点执行
 
-```
+```text
 docker pull kubesphere/kube-proxy:v1.18.6
 docker pull kubesphere/pause:3.2
 docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.6.7
@@ -178,7 +178,7 @@ docker image remove registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:
 
 在 Master 节点执行
 
-```
+```text
 docker pull kubesphere/kube-apiserver:v1.18.6
 docker pull kubesphere/kube-controller-manager:v1.18.6
 docker pull kubesphere/kube-scheduler:v1.18.6
@@ -199,7 +199,7 @@ docker image remove registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.4
 
 在 Master 节点执行
 
-```
+```text
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --service-cidr=10.192.0.0/16 --v=5
 ```
 
@@ -207,7 +207,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --service-cidr=10.192.0.0/16 
 
 命令执行成功时，结尾的输出如下
 
-```
+```text
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
@@ -227,9 +227,11 @@ kubeadm join x.x.x.x:6443 --token dkky0c.xxxxxxxxxxxxxxxxxxx \
 
 ```
 
+## 配置 kubectl 
+
 在 Master 节点执行：
 
-```
+```text
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
@@ -237,9 +239,11 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 > 执行完之后，需要退出重新登陆一次
 
+## Slave加入集群
+
 在 Slave 节点以 sudo 执行最后输出的
 
-```
+```text
 sudo kubeadm join x.x.x.x:6443 --token dkky0c.xxxxxxxxxxxxxxxxxxx \
     --discovery-token-ca-cert-hash sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 ```
@@ -248,7 +252,7 @@ sudo kubeadm join x.x.x.x:6443 --token dkky0c.xxxxxxxxxxxxxxxxxxx \
 
 在主节点执行:
 
-```
+```text
 mkdir ~/k8s
 cd ~/k8s
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
@@ -257,7 +261,7 @@ kubectl apply -f kube-flannel.yml
 
 # 添加自动补全
 
-```
+```text
 cat << EOF | tee -a ~/.bashrc 
 
 source <(kubectl completion bash)
