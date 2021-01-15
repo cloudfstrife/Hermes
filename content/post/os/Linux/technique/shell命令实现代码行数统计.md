@@ -15,13 +15,13 @@ Shell命令实现代码行数统计
 <!--more-->
 
 ```text
-find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f | xargs cat | grep -v $^ | wc -l
+find ./ -regextype posix-extended -regex ".*.(md|go)" -type f | xargs -I {} grep -v "^$" {} | wc -l
 ```
 
 ## 解释
 
 ```text
-find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f 
+find ./ -regextype posix-extended -regex ".*.(md|go)" -type f
 ```
 
 在当前目录下查找以`.conf`,`.md`,`.go`为后缀的文件。
@@ -29,18 +29,10 @@ find ./ -regextype posix-extended -regex ".*.(conf|md|go)" -type f
 ---
 
 ```text
-xargs cat
+xargs -I {} grep -v "^$" {}
 ```
 
-查看这些文件的内容
-
----
-
-```text
-grep -v $^
-```
-
-去除空行
+查看这些文件的内容，并去除空行
 
 ---
 
