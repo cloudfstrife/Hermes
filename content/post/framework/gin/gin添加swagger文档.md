@@ -551,11 +551,11 @@ $ ./dist/swagger-testing/swagger-testing
 
 打开浏览器访问 http://127.0.0.1:8080/swagger/index.html 即可
 
-### 一些补充
+### 附加说明
 
 * 可以 Makefile 的编译命令前面添加 `swag init` ，就不需要每次构建前手动生成，也可以使用 go generate 来实现。
 * gin swagger 注解 参见： [swag README](https://github.com/swaggo/swag/blob/master/README.md)
-
+* 文件上传的注解： `// @Param file formData file true "文件"`
 
 
 ## 参考资料
