@@ -28,28 +28,7 @@ sudo apt-get install screenfetch
 
 ## 运行效果
 
-```text
-$ screenfetch 
-                          ./+o+-       USER_NAME@HOST_NAME
-                  yyyyy- -yyyyyy+      OS: Ubuntu 20.04 focal
-               ://+//////-yyyyyyo      Kernel: x86_64 Linux 5.8.0-44-generic
-           .++ .:/++++++/-.+sss/`      Uptime: 1d 7h 45m
-         .:++o:  /++++++++/:--:/-      Packages: 2387
-        o:+o+:++.`..```.-/oo+++++/     Shell: zsh 5.8
-       .:+o:+o/.          `+sssoo+/    Resolution: 3840x1080
-  .++/+:+oo+o:`             /sssooo.   DE: GNOME 3.36.5
- /+++//+:`oo+o               /::--:.   WM: Mutter
- \+/+o+++`o++o               ++////.   WM Theme: Adwaita
-  .++.o+++oo+:`             /dddhhh.   GTK Theme: Yaru-light [GTK2/3]
-       .+.o+oo:.          `oddhhhh+    Icon Theme: Yaru
-        \+.++o+o``-````.:ohdhhhhh+     Font: Ubuntu 11
-         `:o+++ `ohhhhhhhhyo++os:      Disk: 254G / 1.4T (19%)
-           .o:`.syhhhhhhh/.oo++o`      CPU: Intel Core i5-8500 @ 6x 4.1GHz [35.0°C]
-               /osyyyyyyo++ooo+++/     GPU: Intel Corporation UHD Graphics 630 (Desktop)
-                   ````` +oo+++o\:     RAM: 4947MiB / 31958MiB
-                          `oo++.      
-
-```
+![ubuntu](/images/linux/screenfetch/01.png)
 
 不同系统的输出并不相同，右侧自上而下的信息包含：用户名与主机名，操作系统及版本号，操作系统核心版本号，系统运行时长，安装的软件包数量，Shell名称及版本，屏幕分辨率，桌面环境，窗口管理器程序，窗口管理器的主题，GTK主题，图标集，默认字体，硬盘空间大小及使用率，CPU基本信息，GPU基本信息，内存信息。
 
