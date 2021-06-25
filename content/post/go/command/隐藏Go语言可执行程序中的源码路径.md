@@ -34,7 +34,7 @@ func main() {
 
 ## 运行
 
-```
+```text
 $ go build -o testing
 $ ./testing
 2021-06-25T10:21:40+08:00	info	testing/main.go:8	go
@@ -56,7 +56,7 @@ main.main()
 
 ## 使用trimpath
 
-```
+```text
 $ go build -o testing -trimpath
 $ ./dist/testing/testing 
 Version
