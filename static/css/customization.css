@@ -1,0 +1,19 @@
+.content_licenses {
+	margin-top:20px;
+	text-align:center;
+}
+
+.content_licenses a {
+	text-align:center;
+	margin:0 auto;
+}
+
+.content_licenses a img{
+	text-align:center;
+	margin:0 auto;
+	display: block;
+}
+
+body{
+	filter: grayscale(0);
+}
