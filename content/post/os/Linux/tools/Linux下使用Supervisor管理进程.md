@@ -43,7 +43,7 @@ Supervisor 主要由三个可执行程序构成
 
 * `supervisortd`                            Supervisor 守护进程的可执行程序
 * `supervisorctl`                           Supervisor 的客户端应用程序
-* `echo_supervisord_conf`                   回显配置信息，一般用于生成初始配置文件 
+* `echo_supervisord_conf`                   回显示例配置信息，用于生成初始配置文件 `echo_supervisord_conf > /etc/supervisord.conf`
 
 ### 配置文件
 
