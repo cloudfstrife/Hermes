@@ -70,7 +70,7 @@ EOF
 
 ### nginx 
 
-> 替换 `doh.xxxx.xxx`
+> 替换 `xxx.xxxx.xxx`
 
 ```text
 cat << EOF | sudo tee -a /etc/nginx/conf.d/xxx.xxxx.xxx.conf
@@ -113,8 +113,33 @@ stdout_logfile=/var/log/coredns/stdout.log
 EOF
 ```
 
-## 测试
+## 启动
 
 ```text
-dig @xxx.xxxx.xxx +https google.com 
+sudo nginx -t 
+sudo nginx -s reload
+sudo supervisorctl reload
+
+# 查看日志
+sudo journalctl --unit supervisor.service
+tail /var/log/coredns/stdout.log
+```
+
+## 配置域名解析
+
+略
+
+## 测试
+
+在客户端
+
+```text
+dig @xxx.xxxx.xxx +https google.com
+````
+
+在服务端查看日志
+
+```text
+tail /var/log/coredns/stdout.log
+sudo tail /var/log/nginx/access.log
 ```
