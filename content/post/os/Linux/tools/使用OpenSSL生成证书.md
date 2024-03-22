@@ -41,19 +41,37 @@ keywords:
 * 安全通信: 用于网站、API等的加密通信
 * 数据加密: 用于文件、消息等的加密
 
-本文使用 OpenSSL 简单模拟 CA 签发证书的流程。
+本文使用 OpenSSL 简单模拟 CA 签发证书的流程
 
 ## 概念与名词解释
 
-* 
+* **CA**: CA就相当于一个认证机构，经过这个机构签名的证书可以被认为是可信的
+* **证书**: 证书就是一种文件格式，其中包含被签名的公钥、公钥持有者的相关信息、以及 CA 对公钥的签名信息
+
+### 常用格式
+
+* **x509**: 证书只有公钥，不包含私钥。X.509证书主要用于识别互联网通信和计算机网络中的身份，保护数据传输安全
+* **pcks#7**: 主要是用于存储签名或者加密后的数据，PKCS7可以用原始的DER格式进行存储，也可以使用PEM格式进行存储
+* **pcks#12**: 包含私钥和公钥，有口令保护，PKCS#12的文件是以.p12 或者 .pfx结尾的
+* **PEM**: Privacy-Enhanced Mail，隐私增强邮件。PEM格式一般包含头部，说明字段，BASE64编码的内容，尾部
+* **DER**: Distinguished Encoding Rules，可分辩编码规则，一种二进制格式
+
+### 常用文件后缀
+
+* **.pem**: PEM格式的文件
+* **.der**: DER格式的文件
+* **.csr**: 证书签署请求文件，是用于向 CA 申请签名的请求文件
+* **.crt**: 证书文件
+* **.cer**: 证书文件
+* **.key**: 一般用于存储密钥文件
 
 ## CA 生成自签名证书
 
 CA 生成自签名证书步骤如下：
 
-1. 生成CA的密钥
+1. 生成 CA 的密钥
 2. 生成证书签署请求（CSR）
-3. 生成证书
+3. 生成 CA 证书
 
 ```bash
 mkdir -p CA
@@ -83,6 +101,14 @@ openssl x509 -req -days 365 -in ca.csr -signkey ca.pem -out ca.crt
 
 ## 用户生成证书签署请求
 
+CA 为用户签名证书的步骤如下：
+
+1. 用户生成自己的密钥
+2. 用户生成证书签署请求（CSR）
+3. 用户以秘密形式将证书签署请求提交给 CA
+3. CA 为证书签名
+4. CA 将签名后的证书与 CA 的证书一起分发给用户
+
 ```bash
 mkdir -p server
 cd server
@@ -96,8 +122,6 @@ openssl rsa -in server_private.pem -outform PEM -pubout -out server_public.pem
 # 生成证书签署请求
 openssl req -new -key server_private.pem -out server.csr -subj "/C=US/ST=State of Tennessee/L=Memphis/O=Memphis Company/OU=IT/CN=www.memphis.com/emailAddress=it@memphis.com"
 ```
-
-用户的 CSR 文件以秘密形式提交给 CA
 
 ## CA 为用户的证书签名
 
@@ -161,4 +185,4 @@ server {
 }
 ```
 
-启动服务后，访问会报 `SEC_ERROR_UNKNOWN_ISSUER` ， 因为证书的签发者是未知的。可以将 `CA/ca.crt` 添加到浏览器中。
+启动服务后，访问页面会报 `SEC_ERROR_UNKNOWN_ISSUER` ， 因为证书的签发者是未知的。此时可以将 `CA/ca.crt` 添加到浏览器中。
