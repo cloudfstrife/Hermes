@@ -232,3 +232,16 @@ fn main() {
     println!("{}", i);
 }
 ```
+
+### sum , min , max , count 
+
+数值计算的消费器。字面意思
+
+### find , position , any , all 
+
+查找型的消费器
+
+`find` 用于从头到尾依次查找能令闭包返回 `true` 的第一个元素，返回 `Option<Item>`
+`position` 类似 `find` 函数，不过返回的是 `Option<usize>`，即元素的下标
+`all` 如果有任意一个迭代元素调用闭包返回 `false`，则整个表达式返回 `false`，否则返回 `true`
+`any`: 如果有任意一个迭代元素调用闭包返回 `true`，则整个表达式返回 `true`，否则返回 `false`
