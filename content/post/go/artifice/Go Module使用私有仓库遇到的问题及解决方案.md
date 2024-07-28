@@ -54,6 +54,7 @@ $ go build
 ```text
 cat << EOF| tee -a ~/.netrc
 machine github.com login USERNAME password APIKEY
+EOF
 ```
 
 > 替换上面的域名 ， USERNAME ， APIKey 为生成的 Person Access Token
