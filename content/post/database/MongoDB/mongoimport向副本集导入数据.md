@@ -21,8 +21,15 @@ mongoimport向副本集导入数据
 
 <!--more-->
 
+## 使用 --host 选项
 
 ```bash
 # 格式
 mongoimport --host=${RS-NAME}/${HOST-1}:${PORT-1},${HOST-2}:${PORT-2},${HOS3-1}:${POR3-1} --db=${DATABASE} --username=${USERNAME} --password=${PASSWORD} --authenticationDatabase=admin --file=/PATH/TO/FILE.json 
+```
+
+## 使用 --uri 选项
+
+```bash
+mongoimport --uri="mongodb://${USERNAME}:${PASSWORD} @${HOST-1}:${PORT-1},${HOST-2}:${PORT-2},${HOS3-1}:${POR3-1}/${DATABASE}?authSource=admin&replicaSet=${RS-NAME}" --file=/PATH/TO/FILE.json 
 ```
