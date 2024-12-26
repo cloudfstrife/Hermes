@@ -12,7 +12,7 @@
 
 # 站点域名，比如： https://hugo-next.eu.org
 # Website domain, eg: https://hugo-next.eu.org
-baseURL: https://www.bitlogs.tech
+baseURL: /
 # 站点标题
 # Website title
 title: "| Cloud Strife |"
@@ -28,7 +28,7 @@ languageCode: zh-CN
 hasCJKLanguage: true
 # 每页显示文章数量
 # Display items per page
-paginate: 10
+pagination.pagerSize: 10
 # 开启支持表情符号
 # Enable Emoji support
 enableEmoji: true
@@ -98,7 +98,7 @@ outputs:
 
 # 输出 robots 文件支持爬虫扫描
 # Enable robots with support crawler scan
-enableRobotsTXT: false
+enableRobotsTXT: true
 
 # 强制输出时压缩文件
 # Compress all files when output
@@ -194,10 +194,10 @@ params:
 
   # 用户自定义文件配置
   # Define custom file paths.
-  customFilePath:
+  # customFilePath:
   #   sidebar: custom_sidebar.html
   #   footer: custom_footer.html
-    style: /css/customization.css
+  #   style: /css/custom_style.css
 
   # 知识共享国际许可 4.0
   # 更多信息： https://creativecommons.org/about/cclicenses/
@@ -293,13 +293,13 @@ params:
     # Posts / Categories / Tags in sidebar.
     basic: true
     # 站点访问信息
-    # Site information
-    statistic: 
-      enable: true
+    # Site's view information
+    views:  
+      enable: false
       # 组件类型，可选值为： 51la, busuanzi
-      # 使用51la时需要注册账号：https://invite.51.la/1NUfGTS1?target=V6
+      # 使用51la时需要注册账号：https://invite.51.la/
       # Plguin value is: 51la, busuanzi
-      # plugin: busuanzi
+      plugin: busuanzi
 
   # 社交链接地址
   # 用法： `Key: 名称 || 链接地址 || 图标`
@@ -421,22 +421,6 @@ params:
       # 公安网备案号
       gonganNum: 
 
-    # 站点支持供应商列表
-    # Vendors list who support website. 
-    vendors:
-      enable: false
-      # 支持说明
-      # Some support information description.
-      title: 提供CDN/云资源支持
-      # 供应商列表，请将带有图标的供应商放在前面
-      # Vendors list, remember that who with logo image need put in top.
-      list:
-        - name: Vercel
-          image: 
-            url: /imgs/vendors/vercel.svg
-            width: 50
-          link: https://vercel.com
-
 
   # ---------------------------------------------------------------
   # 文章参数设置
@@ -457,6 +441,7 @@ params:
   # 开启文章头部元素显示
   # Post meta display settings
   postMeta:
+    # 是否开启各元素的文字显示 
     itemText: true
     created: true
     updated:
@@ -465,6 +450,18 @@ params:
     categories: true
     wordCount: false
     readTime: false
+    # 是否开启评论数显示
+    comments: 
+      enable: false
+      # 评论统计插件，暂只支持waline
+      # Comment counter plugin, only support waline
+      plugin: waline
+    # 是否开启页面访问数显示
+    views:
+      enable: false
+      # 页面访问统计插件，支持busuanzi, waline, leancloud
+      # Page views counter plugin, support: busuanzi, waline, leancloud
+      plugin: busuanzi
 
   # 文章底部的设置
   # Post footer settings
@@ -508,7 +505,7 @@ params:
     #channel0: Twitter || https://twitter.com/username || fab fa-twitter
     #channel1: Telegram || https://t.me/channel_name || fab fa-telegram
     #channel2: WeChat || /images/wechat_channel.jpg || fab fa-weixin
-    #channel3: RSS || /atom.xml || fa fa-rss
+    channel3: RSS || /rss.xml || fa fa-rss
 
   # 文章的在线编辑
   # Post edit
@@ -552,7 +549,7 @@ params:
     style: mac
     # 在代码块上添加拷贝按钮
     # Add copy button on codeblock
-    copyBtn: false
+    copyBtn: true
 
   # 返回顶部设置
   # Backtop settings
@@ -783,13 +780,13 @@ params:
     # `name` 参数名可选值：livere | waline | utterances | artalk | giscus
     # Modify texts or order for any naves, here are some examples.
     nav:
-      - name: giscus
-        title: Giscus
-        color: "#886ce4"
-        weight: 1
       - name: waline
         title: Waline
         color: "#27ae60"
+        weight: 1
+      - name: giscus
+        title: Giscus
+        color: "#886ce4"
         weight: 2
 
   # Waline 评论插件
@@ -924,8 +921,6 @@ params:
     busuanzi:
       visitorsIcon: fa fa-user
       viewsIcon: fa fa-eye
-      postViews: true
-
 
   # ---------------------------------------------------------------
   # 内容搜索服务
@@ -941,6 +936,9 @@ params:
     indexName: #<algolia index name>
     hits:
       perPage: 10
+    # 索引生成内容长度字数限制
+    # Index generation content length word count limit.
+    limit: 1000
 
   # 本地搜索
   # Local Search
@@ -964,6 +962,9 @@ params:
     # 页面加载时是否要重新载入索引文件
     # Preload the search data when the page loads.
     preload: false
+    # 索引生成内容长度字数限制
+    # Index generation content length word count limit.
+    limit: 1000
 
 
   # ---------------------------------------------------------------
@@ -1075,31 +1076,17 @@ params:
 
 
   # ---------------------------------------------------------------
-  # CDN 服务（暂时只支持 unpkg 和 cndjs）
+  # CDN 服务
   # CDN Settings
   # ---------------------------------------------------------------
-
   vendors:
-    vendors:
     # The CDN provider of NexT internal scripts.
-    # Available values: local | unpkg | cdnjs | qiniu | bootcdn | custom
-    # Warning: If you are using the latest master branch of NexT, please set `internal: local`
+    # Available values: local | cdn
     internal: local
     # The default CDN provider of third-party plugins.
-    # Available values: local | unpkg | cdnjs| qiniu | bootcdn | custom
-    # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-    plugins: qiniu
-    # TODO
+    # Available values: local | cdnjs | unpkg | jsdelivr | staticfile | bootcdn | 7ed | zstatic | zeyao | custom
+    plugins: local
     # Custom CDN URL
     # For example:
     # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
     # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-    #custom_cdn_url:
-
-  # TODO
-  # Assets
-  # Accelerate delivery of static files using a CDN
-  # The js option is only valid when vendors.internal is local.
-  css: css
-  js: js
-  images: imgs
