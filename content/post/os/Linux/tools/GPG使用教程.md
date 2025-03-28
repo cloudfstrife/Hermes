@@ -748,7 +748,7 @@ cat << EOF | tee -a  ~/.zprofile
 # -----------------------------------------------------------------------------
 # gpg ssh auth sock
 # -----------------------------------------------------------------------------
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)
 EOF 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ```
