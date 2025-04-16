@@ -16,7 +16,7 @@ Go语言的`os/signal`包提供了系统信号监听机制，用于实现系统�
 
 <!--more-->
 
-关于Linux信号，参见[Linux信号机制](/2019/10/linux信号机制/)
+关于Linux信号，参见[Linux信号机制](/post/os/linux/system/linux信号机制)
 
 ## os/signal包的函数
 

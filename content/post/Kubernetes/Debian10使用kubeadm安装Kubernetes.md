@@ -85,7 +85,7 @@ EOF
 
 ## 禁用 swap 分区
 
-参考 : [禁用交换（swap）分区的正确方式](/2020/07/禁用交换swap分区的正确方式/)
+参考 : [禁用交换（swap）分区的正确方式](/post/os/linux/system/systemd引导的linux禁用交换swap分区的正确方式)
 
 # 安装Docker
 
