@@ -751,6 +751,8 @@ cat << EOF | tee -a  ~/.zprofile
 export SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)
 EOF 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+gpg-connect-agent updatestartuptty /bye >/dev/null
 ```
 验证
 
