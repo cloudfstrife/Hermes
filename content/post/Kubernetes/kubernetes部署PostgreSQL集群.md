@@ -21,6 +21,9 @@ keywords:
 #mermaid: true
 ---
 
+使用 stackgres-operator 部署 PostgreSQL 集群，并添加 TimescaleDB 支持
+
+<!--more-->
 
 ## 安装 Operator
 
@@ -105,21 +108,21 @@ kubectl -n postgres exec -it postgres-0 -- psql -U postgres
 ```
 
 ```sql
-# 启用 timescaledb 扩展
+--- 启用 timescaledb 扩展
 CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 
-# 创建用户
+--- 创建用户
 CREATE USER statistics PASSWORD 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
-# 创建数据库
+--- 创建数据库
 CREATE DATABASE statistics WITH OWNER = statistics ENCODING = 'UTF8' CONNECTION LIMIT = -1;
 
-# 切换到创建的数据库
+--- 切换到创建的数据库
 \c statistics;
 
-# 授权
+--- 授权
 grant all on SCHEMA public to statistics;
 
-# 退出
+--- 退出
 \q
 ```
