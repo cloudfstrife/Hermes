@@ -8,10 +8,11 @@ categories:
 tags:
   - kubernetes
   - PostgreSQL
+  - TimescaleDB
 keywords: 
   - kubernetes
   - PostgreSQL
-  - stackgres-operator
+  - TimescaleDB
 
 # 开启数学公式渲染，可选值： mathjax, katex
 #math: mathjax
