@@ -19,7 +19,7 @@ keywords:
 #mermaid: true
 ---
 
-[Fx](GitHub - uber-go/fx: A dependency injection based application framework for Go.)是Uber开发并开源的Go语言模块组合框架，Fx提供了模块化、可插拔、可组合的方式来构建Go应用。与 [wire](GitHub - google/wire: Compile-time Dependency Injection for Go)生成代码的方式不同的是：Fx通过反射创建对象和解析依赖关系。
+[Fx](https://github.com/uber-go/fx)是Uber开发并开源的Go语言模块组合框架，Fx提供了模块化、可插拔、可组合的方式来构建Go应用。与 [wire](GitHub - google/wire: Compile-time Dependency Injection for Go)生成代码的方式不同的是：Fx通过反射创建对象和解析依赖关系。
 
 <!--more-->
 
